@@ -1,0 +1,13 @@
+23:05:27 **** インクリメンタル・ビルド of configuration Debug for project test ****
+Info: Internal Builder is used for build
+g++ -o test.exe "src\\test.o" 
+/mingw/lib/libmingw32.a(setargv.o):(.text+0x33): undefined reference to `__chkstk_ms'
+/mingw/lib/libmingwex.a(glob.o):(.text+0x6d2): undefined reference to `__chkstk_ms'
+/mingw/lib/libmingwex.a(glob.o):(.text+0x8b8): undefined reference to `__chkstk_ms'
+/mingw/lib/libmingwex.a(glob.o):(.text+0x900): undefined reference to `__chkstk_ms'
+/mingw/lib/libmingwex.a(glob.o):(.text+0xa25): undefined reference to `__chkstk_ms'
+/mingw/lib/libmingwex.a(glob.o):(.text+0xc15): more undefined references to `__chkstk_ms' follow
+collect2: ld returned 1 exit status
+
+23:05:29 Build Finished (took 1s.621ms)
+

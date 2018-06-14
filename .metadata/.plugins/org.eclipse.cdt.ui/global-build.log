@@ -1,0 +1,30 @@
+23:12:22 **** クリーンのみのビルド of configuration Debug for project testes ****
+rm -rf src/testes.o testes.exe src/testes.d 
+プログラム "rm" を実行できません: 起動失敗
+
+Error: Program "rm" not found in PATH
+PATH=[C:\pleiades\eclipse\mingw\bin;\bin;\usr\bin;C:/pleiades/eclipse/./jre/bin/../jre/bin/client;C:/pleiades/eclipse/./jre/bin/../jre/bin;C:/pleiades/eclipse/./jre/bin/../jre/lib/i386;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\TXE Components\TCS\;C:\Program Files\Intel\TXE Components\TCS\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\MinGW\bin;";C:\borland\bcc55\Bin";C:\Users\syuka\AppData\Local\Microsoft\WindowsApps;;C:\pleiades\eclipse]
+
+23:12:22 **** クリーンのみのビルド of configuration Debug for project testes ****
+23:17:11 **** Rebuild of configuration Debug for project testa ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\testa.o" "..\\src\\testa.cpp" 
+g++ -o testa.exe "src\\testa.o" 
+/mingw/lib/libmingw32.a(setargv.o):(.text+0x33): undefined reference to `__chkstk_ms'
+/mingw/lib/libmingwex.a(glob.o):(.text+0x6d2): undefined reference to `__chkstk_ms'
+/mingw/lib/libmingwex.a(glob.o):(.text+0x8b8): undefined reference to `__chkstk_ms'
+/mingw/lib/libmingwex.a(glob.o):(.text+0x900): undefined reference to `__chkstk_ms'
+/mingw/lib/libmingwex.a(glob.o):(.text+0xa25): undefined reference to `__chkstk_ms'
+/mingw/lib/libmingwex.a(glob.o):(.text+0xc15): more undefined references to `__chkstk_ms' follow
+collect2: ld returned 1 exit status
+02:05:16 **** Rebuild of configuration Debug for project tes ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\tes.o" "..\\src\\tes.cpp" 
+g++ -o tes.exe "src\\tes.o" 
+Info: Nothing to build for tes
+Info: Nothing to build for tes
+02:31:43 **** インクリメンタル・ビルド of configuration Debug for project tes ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\tes.o" "..\\src\\tes.cpp" 
+g++ -o tes.exe "src\\tes.o" 
+Info: Nothing to build for tes
