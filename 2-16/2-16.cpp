@@ -14,28 +14,45 @@ using namespace std;
 
 int main()
 {
-	// 月を表すint型変数xの宣言
-	int x;
+	//月として入力する整数値を宣言
+	int thisMonth;
 
-	//xの入力を促す
-	cout << "月を入力してください : ";
+	//整数値の入力
+	cout << "月を入力してください : "; cin >> thisMonth;
 
-	//入力されたxを読み込む
-	cin >> x;
+	 //入力値を利用したswitch文の作成
+	switch (thisMonth){
 
-	 //xの値を利用したswitch文の作成
-	switch (x){
-	      case 1 : cout << "冬\n" ; break;
-	      case 2 : cout << "冬\n" ; break;
-	      case 3 : cout << "春\n";  break;
-	      case 4 : cout << "春\n" ; break;
-	      case 5 : cout << "春\n" ; break;
-	      case 6 : cout << "夏\n" ; break;
-	      case 7 : cout << "夏\n";  break;
-	      case 8 : cout << "夏\n" ; break;
-	      case 9 : cout << "秋\n" ; break;
-	      case 10 : cout << "秋\n"; break;
-	      case 11 : cout << "秋\n" ;break;
-	      case 12 : cout << "冬\n" ;break;
+
+	      //(12)1,2月の場合"冬"と表示
+	      case 1 :
+	      case 2 : {cout << "冬\n";}
+	      break;
+
+	      //3,4,5月の場合"春"と表示
+	      case 3 :
+	      case 4 :
+	      case 5 : {cout << "春\n";}
+	      break;
+
+	      //6,7,8月の場合"夏"と表示
+	      case 6 :
+	      case 7 :
+	      case 8 : {cout << "夏\n";}
+	      break;
+
+	      //9,10,11月の場合"秋"と表示
+	      case 9 :
+	      case 10:
+	      case 11: {cout << "秋\n";}
+	      break;
+
+	      //12月の場合"冬"と表示
+	      case 12: {cout << "冬\n";}
+	      break;
+
+	      //上記以外の整数値が入力された場合、"その月はありません。"と表示
+	      default: {cout << "その月はありません。\n";}
+	      break;
 	     }
 }
