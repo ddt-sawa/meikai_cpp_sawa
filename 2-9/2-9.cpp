@@ -15,21 +15,25 @@ using namespace std;
 
 int main()
 {
-	//int型変数x,yの宣言
-	int x, y;
+	//整数値の宣言
+	int firstNumber, secondNumber;
 
-    // x,yの入力を促し、読み込む
-    cout << "整数x : "; cin >> x;
-    cout << "整数y : "; cin >> y;
+    cout << "整数x : "; cin >> firstNumber;    //整数xの入力
+    cout << "整数y : "; cin >> secondNumber;   //整数yの入力
 
-    //二値の差を表すint型変数balanceを宣言し、x - y の絶対値で初期化
-    int balance = (x > y ? (x - y) : (y - x));
+    //二値の差を求める
+    int balance = (firstNumber > secondNumber ? (firstNumber - secondNumber) : (secondNumber - firstNumber));
 
-    //差が10以下の場合
-    if (balance <= 10)
+    //二値の差が10以下の場合
+    if (balance <= 10){
+    	//差が10以下であることを表示
     	cout << "それらの差は10以下です。\n";
+    }
 
-    else
+    //二値の差が11以上の場合
+    else {
+    	//差が11以上であることを表示
     	cout << "それらの差は11以上です。\n";
+    }
 }
 
