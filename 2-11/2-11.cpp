@@ -14,24 +14,26 @@ using namespace std;
 
 int main()
 {
-	//int型変数x,y,zの宣言
-    int x, y, z;
+	//三つの整数を宣言
+    int firstNumber, secondNumber, thirdNumber;
 
-    //x,y,zの入力を促し、読み込む
-    cout << "整数x : "; cin >> x;
-    cout << "整数y : "; cin >> y;
-    cout << "整数z : "; cin >> z;
+    cout << "整数1 : "; cin >> firstNumber;     //整数1の入力
+    cout << "整数2 : "; cin >> secondNumber;    //整数2の入力
+    cout << "整数3 : "; cin >> thirdNumber;     //整数3の入力
 
-    //中央値を表すint型変数medの宣言
-    int med = x;
+    //初めに整数を1を中央値(medValue)として、中央値でなかった場合入れ替え
+    int medValue = firstNumber;
 
-    //yが中央値の場合
-    if ((y <= x && y >= z) || (y <= z && y >= x))
-    	med = y;
+    //整数2が中央値の場合、medValueに代入
+    if ((secondNumber <= firstNumber && secondNumber >= thirdNumber) || (secondNumber <= thirdNumber && secondNumber >= firstNumber)){
+    	medValue = secondNumber;
+    }
 
-    //zが中央値の場合
-    else if  ((z <= x && z >= y) || (z <= y && z >= x))
-    	med = z;
+    //整数3が中央値の場合、medValueに代入
+    else if  ((thirdNumber <= firstNumber && thirdNumber >= secondNumber) || (thirdNumber <= secondNumber && thirdNumber >= firstNumber)) {
+    	medValue = thirdNumber;
+    }
 
-    cout << "中央値は" <<  med <<"です。\n";
+    //中央値の表示
+    cout << "中央値は" <<  medValue <<"です。\n";
 }
