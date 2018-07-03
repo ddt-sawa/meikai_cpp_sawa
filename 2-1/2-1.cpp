@@ -14,21 +14,27 @@ using namespace std;
 
 int main()
 {
-	//int型変数xとyの宣言
-	int x, y;
+	//整数値firstNumberと、その絶対値absoluteValueを宣言
+	int firstNumber, absoluteValue;
 
-	//xの入力を促す
+	//整数値の入力を促す
 	cout << "整数値 : ";
 
-	//xに整数値を読み込む
-	cin >> x;
+	//入力された整数値を読み込む
+	cin >> firstNumber;
 
-	//xが正および0の場合、yにxを代入
-	if (x >= 0)  y = x;
+	//整数値が正および0の場合
+	if (firstNumber >= 0) {
+		//そのままの値が絶対値
+		absoluteValue = firstNumber;
+	}
 
-	//xが負の場合、yに-xを代入
-	else  y = -x;
+	//整数値が負の場合
+	else {
+		//符号を入れ替えた値が絶対値
+		absoluteValue = -firstNumber;
+	}
 
-	//xの絶対値であるyを表示
-	cout << "その絶対値は" << y << "です。\n";
+	//絶対値を表示
+	cout << "その絶対値は" << absoluteValue << "です。\n";
 }
