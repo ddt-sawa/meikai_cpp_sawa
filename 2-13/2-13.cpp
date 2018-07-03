@@ -13,22 +13,27 @@ using namespace std;
 
 int main()
 {
-	//int型変数x,yの宣言
-	int x, y;
+	//2整数を宣言
+	int firstNumber, secondNumber;
 
-    // x,yの入力を促し、読み込む
-    cout << "整数x : "; cin >> x;
-    cout << "整数y : "; cin >> y;
+    //
+    cout << "整数x : "; cin >> firstNumber;    //整数xを入力
+    cout << "整数y : "; cin >> secondNumber;   //整数yを入力
 
-    //xがyより小さいならば、値を交換
-    if (x < y){
+    //整数xが整数yより小さいならば、値を交換
+    if (firstNumber < secondNumber){
 
-    	//値交換用のint型変数tの初期化
-    	int t = x;
-    	x = y;
-    	y = t;
+    	int t = firstNumber;           //整数xの値を一時保存
+    	firstNumber = secondNumber;    //整数yの値を整数xに代入
+    	secondNumber = t;              //保存していた整数xの値を整数yに代入
     }
-    cout << "x <= y となるようにソートしました。\n";
-    cout << "整数xは" << x << "です。\n";
-    cout << "整数yは" << y << "です。\n";
+
+    //2整数を降順にソートしたことを表示
+    cout << "整数x <= 整数y となるようにソートしました。\n";
+
+    //整数xの表示
+    cout << "整数xは" << firstNumber << "です。\n";
+
+    //整数yの表示
+    cout << "整数yは" << secondNumber << "です。\n";
 }
