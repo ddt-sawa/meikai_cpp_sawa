@@ -13,13 +13,15 @@ using namespace std;
 
 int main()
 {
-	//int型変数x,yの宣言
-	int x, y;
+	//二つの整数値の宣言
+	int firstNumber, secondNumber;
 
-    // x,yの入力を促し、読み込む
-    cout << "整数x : "; cin >> x;
-    cout << "整数y : "; cin >> y;
+    //一つ目の整数値の入力
+    cout << "整数x : "; cin >> firstNumber;
 
-    //x - y の絶対値を表示
-     cout << "それらの値の差は" << (x > y ? (x - y) : (y - x)) << "です。\n";
+    //二つ目の整数値の入力
+    cout << "整数y : "; cin >> secondNumber;
+
+    //二値の差を表示
+     cout << "それらの値の差は" << (firstNumber > secondNumber ? (firstNumber - secondNumber) : (secondNumber - firstNumber)) << "です。\n";
 }
