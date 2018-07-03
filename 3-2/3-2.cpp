@@ -16,31 +16,37 @@ using namespace std;
 
 int main()
 {
-	//rand関数を使う準備
+	//乱数テーブルを準備
 	srand(time(NULL));
 
-	//rand関数を用いて、int型変数luckyを10-99の乱数で初期化
-	int lucky = rand() % 90 + 10;
+	//正解となる10～99までの乱数を作成
+	int randomNumber = rand() % 90 + 10;
 
-	//回答となるint型変数xの宣言
-	int x;
+	//回答となる整数値の宣言
+	int userAnswer;
 
+	//回答開始の合図を表示
 	cout << "数当てゲーム開始！\n";
+
+	//回答の入力を促す
 	cout << "10-99の数を当ててください\n";
 
-	//正解が出るまで入力を続けさせる
+	//正解が出るまで入力を続ける
 	do{
-		//回答を促し、値を読み込む
-		cout << "いくつでしょうか。";  cin >> x;
 
-		//回答(x)が乱数(lucky)より大きい場合
-		if (x > lucky)
+		//回答を促し、入力
+		cout << "いくつでしょうか。";  cin >> userAnswer;
+
+		//回答が正解より大きい場合
+		if (userAnswer > randomNumber) {
 			cout << "もっと小さな数です。\n";
+		}
 
-		//回答(x)が乱数(lucky)より小さい場合
-		else if (x < lucky)
+		//回答が正解より小さい場合
+		else if (userAnswer < randomNumber) {
 			cout << "もっと大きな数です。\n";
-	}while (x != lucky);
+		}
+	}while (userAnswer != randomNumber);
 
 	//正解を通知
 	cout << "正解です!\n";
