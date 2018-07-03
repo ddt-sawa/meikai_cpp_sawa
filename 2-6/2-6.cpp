@@ -15,28 +15,32 @@ using namespace std;
 
 int main()
 {
-	// int型変数xの宣言
-	int x;
+	//判定したい得点の宣言
+	int userScore;
 
-	//xの入力を促す
+	//得点入力を促す
 	cout << "得点を入力してください : ";
 
-	//入力されたxを読み込む
-	cin >> x;
+	//得点入力
+	cin >> userScore;
 
-		//xが0-59の場合
-		if (x >= 0 && x <= 59)
+		//得点が0-59の場合
+		if (userScore >= 0 && userScore <= 59){
 			cout << "不可\n";
+		}
 
-		//xが60-69の場合
-		else if (x >= 60 && x <= 69)
+		//60-69の場合
+		else if (userScore >= 60 && userScore <= 69){
 			cout << "可\n";
+		}
 
-		//xが70-79の場合
-		else if (x >= 70 && x <= 79)
+		//70-79の場合
+		else if (userScore >= 70 && userScore <= 79){
 			cout << "良\n";
+		}
 
-		//xが80-89の場合
-		else if (x >= 80 && x <= 100)
+		//80-89の場合
+		else if (userScore >= 80 && userScore <= 100){
 			cout << "優\n";
+		}
 }
