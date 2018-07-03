@@ -13,16 +13,24 @@ using namespace std;
 
 int main()
 {
-	//double型変数x,yの宣言
-    double x, y;
+	//二つの実数値を宣言
+    double firstNumber, secondNumber;
 
-    // x,yの入力を促し、読み込む
-    cout << "実数x : "; cin >> x;
-    cout << "実数y : "; cin >> y;
+    //一つ目の実数値の入力を促す
+    cout << "実数x : ";
 
-    //最大値を表すdouble型変数minの初期化と、条件式による評価
-    double max = x > y ? x : y;
+    //実数値の入力
+    cin >> firstNumber;
 
-    //maxの表示
+    //二つ目の実数値の入力を促す
+    cout << "実数y : ";
+
+    //実数値の入力
+    cin >> secondNumber;
+
+    //条件式を用いて、大きい方の値を最大値(max)とする
+    double max = firstNumber > secondNumber ? firstNumber : secondNumber;
+
+    //最大値の表示
     cout << "大きい方の値は" << max << "です。\n";
 }
