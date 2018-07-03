@@ -15,26 +15,35 @@ using namespace std;
 
 int main()
 {
-	//int型変数a,bの宣言
-	int a, b;
+	//二つの整数値を宣言
+	int firstNumber, secondNumber;
 
-	//aとbの値の入力を促す
-	cout << "aとbの値を入力してください";
+	//一つ目の整数値の入力を促す
+	cout << "aの値を入力してください : ";
 
-	//入力されたa,bの値を読み込む
-	cin >> a >> b;
+	//入力された整数値を読み込む
+	cin >> firstNumber;
 
-	// a > b の場合『aの方が大きいです。』を表示
-	if (a > b)
+	//二つ目の整数値の入力を促す
+	cout << "bの値を入力してください : ";
+
+	//入力された整数値を読み込む
+    cin >> secondNumber;
+
+	//一つ目の値の方が大きかった場合『aの方が大きいです。』を表示
+	if (firstNumber > secondNumber) {
 		cout << "aの方が大きいです。\n";
+	}
 
-	// b < a の場合『bの方が大きいです。』を表示
-	else if (b < a)
+	//二つ目の値の方が大きかった場合『bの方が大きいです。』を表示
+	else if (firstNumber < secondNumber) {
 		cout << "bの方が大きいです。\n";
+	}
 
-    // a == b の場合『aとbは同じ値です。』を表示
-	else if (a == b)
+    // 両整数が等しい場合『aとbは同じ値です。』を表示
+	else if (firstNumber == secondNumber) {
 			cout << "aとbは同じ値です。\n";
+	}
 }
 
 
