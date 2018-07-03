@@ -8,6 +8,7 @@
 /*演習2-14 0,1,2のいずれかの値の乱数を生成し、0であれば『グー』、1であれば『チョキ』、
  * 2であれば『パー』と表示するプログラムを作成せよ。なおswitch文を用いて実現すること。*/
 
+//srand関数を使うため、<ctime><cstdlib>ヘッダをインクルード
 #include<ctime>
 #include<cstdlib>
 #include<iostream>
@@ -16,18 +17,22 @@ using namespace std;
 
 int main()
 {
+	//じゃんけんの手を表示することの告知
 	 cout << "ランダムにじゃんけんの手を表示します。\n";
 
-	 //rand関数を使うための準備
+	 //乱数テーブルを用意
      srand(time(NULL));
 
-     //0-2の値を取るint型変数xの宣言
-     int x = rand() % 3;
+     //0～2の乱数を生成
+     int randomNumber = rand() % 3;
 
-     //xの値を利用したswitch文の作成
-     switch (x){
-      case 0 : cout << "グー\n";    break;
-      case 1 : cout << "チョキ\n" ; break;
-      case 2 : cout << "パー\n" ;   break;
+     //乱数の値によって表示する手を変更
+     switch (randomNumber){
+      case 0 : {cout << "グー\n";}       //0 = グー
+      break;
+      case 1 : {cout << "チョキ\n";}     //1 = チョキ
+      break;
+      case 2 : {cout << "パー\n";}      //2 = パー
+      break;
      }
 }
