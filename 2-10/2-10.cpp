@@ -13,23 +13,26 @@ using namespace std;
 
 int main()
 {
-	//int型変数x,y,zの宣言
-    int x, y, z;
+	//三つの整数を宣言
+    int firstNumber, secondNumber, thirdNumber;
 
-    //x,y,zの入力を促し、読み込む
-    cout << "整数x : "; cin >> x;
-    cout << "整数y : "; cin >> y;
-    cout << "整数z : "; cin >> z;
+    cout << "整数x : "; cin >> firstNumber;   //整数xの入力
+    cout << "整数y : "; cin >> secondNumber;  //整数yの入力
+    cout << "整数z : "; cin >> thirdNumber;   //整数zの入力
 
-    //最小値を表すint型変数minの宣言と初期化
-    int min = x;
+    //最小値を整数xで初期化
+    int min = firstNumber;
 
-    //yが現時点でのminより小さい場合
-    if (y < min) min = y;
+    //整数yが現時点での最小値より小さい場合
+    if (secondNumber < min) {
+    	min = secondNumber;
+    }
 
-    //zが現時点でのminより小さい場合
-    if (z < min) min = z;
+    //整数zが現時点での最小値より小さい場合
+    if (thirdNumber < min) {
+    	min = thirdNumber;
+    }
 
-    //minの表示
+    //最小値を表示
     cout << "最小値は" << min << "です。\n";
 }
