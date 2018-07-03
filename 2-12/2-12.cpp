@@ -15,35 +15,38 @@ using namespace std;
 
 int main()
 {
-	//int型変数x,yの宣言
-    int x, y;
+	//大小を調べたい2整数を宣言
+    int firstNumber, secondNumber;
 
-    //x,yの入力を促し、読み込む
-    cout << "整数x : "; cin >> x;
-    cout << "整数y : "; cin >> y;
+    cout << "整数x : "; cin >> firstNumber;     //整数xの入力
+    cout << "整数y : "; cin >> secondNumber;    //整数yの入力
 
-    //int型変数min（最小値）、max (最大値)の宣言
-    int min, max;
+    //最小値(minValue)、最大値(maxValue)の宣言
+    int minValue, maxValue;
 
-    //xとyが等しくない場合
-    if (x != y){
+    //2値が等しくない場合、最大値と最小値を求める
+    if (firstNumber != secondNumber){
 
-    	//xがyより大きい場合 最大値はxで最小値はy
-        if (x > y){
-    	    max = x;
-    	    min = y;
+    	//整数xが整数yより大きい場合
+        if (firstNumber > secondNumber){
+    	    maxValue = firstNumber;           //最大値 = 整数x
+    	    minValue = secondNumber;          //最小値 = 整数y
      }
-        //xがyより小さい場合 最大値はyで最小値はx
+        //整数xが整数yより小さい場合
         else{
-    	    max = y;
-            min = x;
+    	    maxValue = secondNumber;          //最大値 = 整数y
+            minValue = firstNumber;           //最小値 = 整数x
      }
 
-     //最大値と最小値の表示
-     cout << "小さい方の値は" << min << "です。\n";
-     cout << "大きい方の値は" << max << "です。\n";
+     //最大値の表示
+        cout << "小さい方の値は" << minValue << "です。\n";
+
+     //最小値の表示
+        cout << "大きい方の値は" << maxValue << "です。\n";
     }
-     //xとyが等しい場合
-     else
+
+     //2値が等しい場合、最大値と最小値の表示なし
+     else{
     	 cout << "二つの値は同じです。\n";
+     }
 }
