@@ -14,25 +14,30 @@ using namespace std;
 
 int main()
 {
-	//アスタリスク記号の数を表すint型変数nの宣言
-	int n;
+	//記号数個数
+	int symbolValue;
 
-	//nの入力を促す
-	cout << "何個*を表示しますか : ";
+	//記号数入力
+	cout << "何個*を表示しますか : ";  cin >> symbolValue;
 
-	//nに整数値を読み込む
-	cin >> n;
+	//記号数が1以上のとき
+	if (symbolValue > 0){
 
-	if (n > 0){
-
-	    //繰り返しの回数を制御するint型変数iを初期化
+	    //繰り返しを制御する整数iを初期化
 	    int i = 0;
 
-	    //n回while文を繰り返し、n個*を表示する
-	    while (i < n) {
+	    //記号数ぶんだけ以下の処理を繰り返す
+	    while (i < symbolValue) {
+
+	    	//記号を1つ表示
 		    cout << '*';
+
+		    //試行回数を制御する整数iをインクリメント
 		    i++;
 	    }
+	    // 記号数が1以上の場合のみ改行を行う
     cout << '\n';
+
     }
+
 }
