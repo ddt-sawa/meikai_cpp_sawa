@@ -14,31 +14,30 @@ using namespace std;
 
 int main()
 {
-	//+-の個数を表すint型変数nの宣言
-	int n;
+	//記号数(+-)
+	int symbolNumber;
 
-	//nの入力を促す
+	//記号数の入力を促す
 	cout << "何個表示しますか : ";
 
-	//nに整数値を読み込む
-	cin >> n;
+	//記号数入力
+	cin >> symbolNumber;
 
-    //nが正の整数であるなら、以下の処理を行う
-    if (n > 0){
+    //入力値が正の整数である場合
+    if (symbolNumber > 0){
 
+    	//繰り返しを制御する変数iを0で初期化
     	int i = 0;
 
-    	//n個記号を表示をする
-    	while (i < n){
+    	//記号数ぶん以下の処理を行う
+    	while (i < symbolNumber){
 
     		//偶数回目は-を表示
-    		if (i % 2)
-    			cout << "-";
+    		if (i % 2) {cout << "-";}
 
     		//奇数回目は+を表示
-    		else
-    			cout << "+";
-            //iをインクリメント
+    		else {cout << "+";}
+            //iをインクリメントし、記号数に達するまで繰り返し
     		i++;
     	}
 
