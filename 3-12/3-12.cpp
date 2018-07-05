@@ -5,7 +5,7 @@
  *      Author: syuka
  */
 
-/* 演習3-12 全問のプログラムを書き換えて、右のように式として表示する
+/* 演習3-12 前問のプログラムを書き換えて、右のように式として表示する
  * プログラムを作成せよ*/
 
 #include<iostream>
@@ -14,28 +14,41 @@ using namespace std;
 
 int main()
 {
-	//nと合計を示すsumの宣言
-	 int n;
-	 int sum = 0;
+	//nの値
+	 int countNumber;
 
-	//nの入力催促と入力
-	 cout << "nの値 : \n";
-	 cin >> n;
+	 //1からnまでの和
+	 int entireSum = 0;
 
-	 // 1-nまでの値をsumに代入
-	 for(int i = 1; i <= n; i++){
+	//nの入力を促す
+	 cout << "nの値 : ";
 
-		 // 数値の後ろに'+'を表示し、最後尾(n)だけ'='を表示する
+	 //入力
+	 cin >> countNumber;
+
+	 // 1からnまでの和を計算するfor文
+	 for(int i = 1; i <= countNumber; i++){
+
+		 // 現在加える値を表示
 		 cout << i;
-		 if (i < n)
+
+		 //値が全体の最後尾の場合
+		 if (i < countNumber)
+
+			 //" + "を表示する
 			 cout << " + ";
+
+		 //値が全体の最後尾の場合
 		 else
+
+			 //" = "を表示する
 			 cout << " = ";
 
-		 sum += i;
+		 //合計に値を加える
+		 entireSum += i;
 	 }
-	 //合計値の出力
-     cout << sum << "\n";
+	 //結果を表示
+     cout << entireSum << "\n";
 }
 
 
