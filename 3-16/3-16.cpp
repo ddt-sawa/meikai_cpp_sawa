@@ -14,12 +14,17 @@ using namespace std;
 
 int main()
 {
-	//整数値を入力させる
-    int n;
-    cout << "nの値 : ";
-	cin >> n;
+	//2乗値を表示したい整数値
+    int integerValue;
 
-	//i回目の時i~2を表示する
-	for (int i = 1; i <= n; i++)
+    //入力を促す
+    cout << "nの値 : ";
+
+    //入力
+	cin >> integerValue;
+
+	//1からnまでの2乗値を表示するループ文
+	for (int i = 1; i <= integerValue; i++)
+		//2乗値を表示
 		cout << i << "の2乗は" << i * i << '\n';
 }
