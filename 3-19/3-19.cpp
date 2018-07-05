@@ -14,15 +14,20 @@ using namespace std;
 
 int main()
 {
-	//正方形の段数としたい整数値を入力させる
-    int n;
+	//正方形の段数
+    int stepNumber;
+
+    //整数値入力を促す
     cout << "段数 : ";
-	cin >> n;
+
+    //入力
+	cin >> stepNumber;
 
 	//n×nマス（正方形）上にアスタリスクを表示
-	for (int i = 1; i <= n; i++){
-		for (int j = 1; j <= n; j++)
+	for (int i = 1; i <= stepNumber; i++){
+		for (int j = 1; j <= stepNumber; j++) {
 			cout << '*';
+		}
 		//段数を変えるため改行
 		cout << '\n';
 	}
