@@ -13,22 +13,29 @@ using namespace std;
 
 int main()
 {
-	//表示するアスタリスクの個数を訪ねる
-	int n;
+	//記号数
+	int symbolNumber;
+
+	//記号数の入力を促す
 	cout << "何個*を表示しますか : ";
-	cin >> n;
+	cin >> symbolNumber;
 
-	//n >= 1の時にのみ以下の処理を行う
-	if (n >= 1){
+	//記号数が1以上の場合
+	if (symbolNumber >= 1){
 
-	//n回アスタリスクを表示する
-	    for (int i = 1; i <= n; i++){
+	//記号を表示するループ文(最初の改行を避けるため、i = 1からインクリメント)
+	    for (int i = 1; i <= symbolNumber; i++){
+
+	    	//記号を表示
 		    cout << '*';
-        //5の倍数回の時改行
-	    if (!(i % 5))
+
+		    //5の倍数個の時改行
+
+	        if ((i % 5) == 0) {
         	cout << '\n';
+	        }
 	    }
-	    //if文のブロックに含まれているため、n < 1の時改行されない
+	    //改行
 	    cout << '\n';
 	}
 }
