@@ -16,23 +16,46 @@ using namespace std;
 
 int main(){
 
-	//開始値、終了値、増分の入力を促す
+	//開始値
+	int startHeight;
 
-	int x; cout << "何cmから : "; cin >> x;
-	int y; cout << "何cmまで : "; cin >> y;
-	int z; cout << "何cmごと : "; cin >> z;
+	//入力を促す
+	cout << "何cmから : ";
 
-	//for文内の繰り返し条件にxを使うので、増分を加えた身長値をaに保存
-    int a = x;
+	//入力
+	cin >> startHeight;
 
+	//終了値
+	int finishHeight;
+
+	//入力を促す
+	cout << "何cmまで : ";
+
+	//入力
+	cin >> finishHeight;
+
+	//増分
+	int incrementValue;
+
+	//入力を促す
+	cout << "何cmごと : ";
+
+	//入力
+	cin >> incrementValue;
+
+	//表示する身長を開始値で初期化
+    int currentHeight = startHeight;
+
+    //表示画面のレイアウトを整える
 	cout << "身長 標準体重\n";
 
-	// (y - x) / z 回増分した身長と標準体重を表示する
-	for (int i = 0; i <= ((y - x) / z); i++){
+	// 増分した身長が終了値に達するまで、標準体重を表示するループ文
+	for (int i = 0; i <= ((finishHeight - startHeight) / incrementValue); i++){
 
-		cout << a << "    " << (a - 100) * 0.9 <<'\n';
+		//標準体重を表示
+		cout << currentHeight << "    " << (currentHeight - 100) * 0.9 <<'\n';
 
-		//身長に増分を加える
-		a += z;
+		//次に表示する身長に増分を加える
+		currentHeight += incrementValue;
 	}
 }
