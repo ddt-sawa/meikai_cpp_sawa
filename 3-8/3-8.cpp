@@ -30,7 +30,7 @@ int main()
 	//以下の処理を記号数ぶん繰り返す
 	    for (int i = 0; i < symbolNumber; i++) {
 		    cout << '*';
-		    {
+	    }
 
 	    //記号数が1以上の場合のみ改行
 	    cout << '\n';
