@@ -17,20 +17,30 @@ using namespace std;
 
 int main()
 {
-	//直角三角形の段数を入力させ、読み込む
-    int n;
+	//直角三角形の段数
+    int stepNumber;
+
+    //段数入力を促す
     cout << "段数 : ";
-	cin >> n;
 
-	//n段の直角三角形を表示
-	for (int i = 1; i <= n; i++){
+    //段数入力
+	cin >> stepNumber;
 
-		//右下に直角を持ってくるため、n - i個の空白文字を置き
-		for (int j = 0; j < n - i; j++)
+	//n段の直角三角形を表示するループ文
+	for (int i = 1; i <= stepNumber; i++){
+
+		//右下に直角を持ってくるため、段数 - i 個ぶんの空白文字を置くループ文
+		for (int j = 0; j < stepNumber - i; j++) {
+            //空白文字を表示
 			cout << ' ';
-		//i個のアスタリスクを表示
-		for (int j = 0; j < i; j++)
+		}
+		//i個の記号を表示するループ文
+		for (int j = 0; j < i; j++) {
+
+            //記号を表示
 			cout << '*';
+		}
+		//段を変えるため改行
 		cout << '\n';
     }
 }
