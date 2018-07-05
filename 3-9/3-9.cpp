@@ -13,18 +13,23 @@ using namespace std;
 
 int main()
 {
-	//int型変数xの宣言
-	int x;
+	//カウントダウンしたい整数値
+	int countNumber;
 
-	//数を一つずつ減らしていくことを告知
-	cout << "カウントダウンします。\n";
+	//カウントダウンを告知
+	cout << "入力したい整数値をカウントダウンします。\n";
 
-	// 正の整数値が入力されるまで、入力を促す
+	// 正の整数値を入力させるためのループ文
 	do{
+		//正の整数値入力を促す
 		cout << "正の整数値 : ";
-		cin >> x;
-	}while (x <= 0);
+		//整数値入力
+		cin >> countNumber;
+		//入力された値が正だった場合、ループを抜ける
+	}while (countNumber <= 0);
 
-	//xの値を0になるまで一つずつ減らしていく
-	for (; x >= 0; cout << x-- << '\n');
+	//値を0になるまで一つずつ減らしていく
+	for (int i = 0; i <= countNumber; i++) {
+		cout << (countNumber - i) << '\n';
+	}
 }
