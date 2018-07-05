@@ -15,22 +15,29 @@ using namespace std;
 
 int main(){
 
-	//整数値を入力させる
-	int n;
+	//約数を調べる整数値
+	int integerValue;
+
+	//入力を促す
 	cout << "整数値 : ";
-	cin >> n;
 
-	//約数の個数を表すint型変数divisorの宣言
-	int divisor = 0;
+	//入力
+	cin >> integerValue;
 
-	for (int i = 1; i <= n; i++){
-		// nを割り切れる約数を探す
-		if (!(n % i)){
+	//約数の総数
+	int divisorNumber = 0;
+
+	//約数を探し、その数を記録するループ文
+	for (int i = 1; i <= integerValue; i++){
+
+		// 整数を割り切れる値（約数）が見つかった場合
+		if ((integerValue % i) == 0){
+			//その約数を表示して改行
 			cout << i << '\n';
-			//約数が見つかるたび、約数の個数に1加える
-			divisor++;
+			//約数が見つかるたび、約数の総数をインクリメント
+			divisorNumber++;
 		}
 	}
-	//約数の個数表示
-	cout << "約数は" << divisor << "個です。\n";
+	//約数の総数を表示
+	cout << "約数は" << divisorNumber << "個です。\n";
 }
