@@ -13,17 +13,22 @@ using namespace std;
 
 int main()
 {
-	//ｎと合計を示すsumの宣言
-	 int n;
+	 //nの値
+	 int countNumber;
 
-	 int sum = 0;
+	 //1からnまでの和
+	 int entireSum = 0;
 
-	 cout << "1からnまでの和を求めます。\n";
-	 cin >> n;
+	 //nの入力を促す
+	 cout << "1からnまでの和を求めます。 n : ";
+	 cin >> countNumber;
 
-	 // sumに1～nまでの和を代入する
-	 for(int i = 1; i <= n; i++)
-		 sum += i;
+	 // 1からnまでの値を
+	 for(int i = 1; i <= countNumber; i++)
 
-     cout << "1から" << n << "までの和は" << sum << "です。\n";
+		 //entireSumに加える
+		 entireSum += i;
+
+	 //結果を表示
+     cout << "1から" << countNumber << "までの和は" << entireSum << "です。\n";
 }
