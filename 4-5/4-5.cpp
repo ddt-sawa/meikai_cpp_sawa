@@ -16,12 +16,26 @@ using namespace std;
 int main()
 {
 	//float型変数
-	float f;
-	cout << "float型の入力 : \n";  cin >> f;
-	cout << f <<"\n";
+	float floatVariable;
+
+	//入力を促す
+	cout << "float型の入力 : ";
+
+	//入力
+	cin >> floatVariable;
+
+	//表示
+	cout << floatVariable <<"\n";
 
 	//double型変数
-	double d;
-	cout << "double型の入力 : \n"; cin >> d;
-	cout <<d << "\n" ;
+	double doubleVariable;
+
+	//入力を促す
+	cout << "double型の入力 : ";
+
+	//入力
+	cin >> doubleVariable;
+
+	//表示
+	cout <<doubleVariable << "\n" ;
 }
