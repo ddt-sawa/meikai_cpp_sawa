@@ -28,14 +28,14 @@ int main()
 	cin >> stepNumber;
 
 	//n段の直角三角形を表示するループ
-	for (int i = 0; i <= stepNumber; i++){
+	for (int firstCounter = 0; firstCounter <= stepNumber; firstCounter++){
 
 		//右上に直角を持ってくるために、段数ぶんの空白文字を置くループ文
-		for (int j = 0; j < i; j++) {
+		for (int secondCounter = 0; secondCounter < firstCounter; secondCounter++) {
 			cout << " ";
 		}
 		//段数-i個の記号を置くループ文
-		for (int j = 1; j <= stepNumber - i; j++) {
+		for (int thirdCounter = 1; thirdCounter <= stepNumber - firstCounter; thirdCounter++) {
 			cout << '*';
 		}
 		cout << '\n';
