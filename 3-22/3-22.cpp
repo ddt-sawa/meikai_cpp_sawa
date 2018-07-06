@@ -6,7 +6,7 @@
  */
 
 /*演習3-22 n段の下向き数字ピラミッドを表示する関数を作成せよ。
- * （右図は4段の例）。第i行目には1 % 10によって得られる
+ * （右図は4段の例）。第i行目にはi % 10によって得られる
  * 数字を表示すること。
  */
 
@@ -16,23 +16,30 @@ using namespace std;
 
 int main()
 {
-	//ピラミッドの段数を入力
-    int n;
+	//ピラミッドの段数
+    int stepNumber;
+
+    //段数入力を促す
     cout << "段数 : ";
-	cin >> n;
 
-	//以下の処理をn回繰り返す
-    for (int i = 1 ; i <= n; i++){
+    //段数入力
+	cin >> stepNumber;
 
-    	//i-1個の空白文字を置く
-    	for(int j = 1; j <= (i - 1); j++)
+	//ピラミッド上に記号を配置するためのループ文
+    for (int firstCounter = 1 ; firstCounter <= stepNumber; firstCounter++){
+
+    	//段目 - 1個の空白文字を置く
+    	for(int secondCounter = 1; secondCounter <= (firstCounter - 1); secondCounter++) {
     		cout << ' ';
+    	}
 
-        //(n - i)*2+1個の数字を置く
-    	for(int j = 1; j <= (n - i) * 2 + 1; j++)
-    		//置く数字の計算
-    		cout << i % 10;
+        //(段数 - 段目)*2+1個の数字を置く
+    	for(int thirdNumber = 1; thirdNumber <= (stepNumber - firstCounter) * 2 + 1; thirdNumber++) {
+    		//置く数字(段目 % 10)を計算
+    		cout << firstCounter % 10;
+    	}
 
+    	//段数を変えるため改行
     	cout << '\n';
     }
  }
