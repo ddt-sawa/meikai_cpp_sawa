@@ -15,10 +15,17 @@ using namespace std;
 
 int main()
 {
-	float f; double d; long double l;
+	//flaot型変数
+	float floatVariable;
+
+	//double型変数
+	double doubleVariable;
+
+	//long double型変数
+	long double longDoubleVariable;
 
 	//typeid関数を用いて、浮動小数点型の情報を表示
-	cout <<  "float型 : " << typeid(f).name() << '\n';
-    cout <<  "double型 : " << typeid(d).name() << '\n';
-	cout <<  "long double型 : " << typeid(l).name() << '\n';
+	cout <<  "float型 : " << typeid(floatVariable).name() << '\n';      //float型
+    cout <<  "double型 : " << typeid(doubleVariable).name() << '\n';    //double型
+	cout <<  "long double型 : " << typeid(longDoubleVariable).name() << '\n'; //long double型
 }
