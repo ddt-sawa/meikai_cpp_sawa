@@ -16,20 +16,24 @@ using namespace std;
 
 int main()
 {
-	//３つの整数の読み込み
-	int x; int y; int z;
-	cout << "整数を3つ入力してください";
-	cin >> x >> y >> z;
+	//３整数の宣言
+	int firstInteger, secondInteger, thirdInteger;
+
+	//３整数入力を促す
+	cout << "整数を3つ入力してください。";
+
+	//３整数入力
+	cin >> firstInteger >> secondInteger >> thirdInteger;
 
 	//合計
-	cout << "合計は" << x + y + z << "です。\n";
+	cout << "合計は" << firstInteger + secondInteger + thirdInteger << "です。\n";
 
 	//平均（キャスト記法）
-	cout << "平均(キャスト記法)は" << (double)(x + y + z) / 2 << "です。\n";
+	cout << "平均(キャスト記法)は" << (double)(firstInteger + secondInteger + thirdInteger) / 2 << "です。\n";
 
 	//平均（関数的記法）
-	cout << "平均(関数的記法)は" << double(x + y + z) / 2 << "です。\n";
+	cout << "平均(関数的記法)は" << double(firstInteger + secondInteger + thirdInteger) / 2 << "です。\n";
 
 	//平均（static_castを用いた記法）
-	cout << "平均(static_cast演算子)は" << static_cast<double>(x + y + z) / 2 << "です。\n";
+	cout << "平均(static_cast演算子)は" << static_cast<double>(firstInteger + secondInteger + thirdInteger) / 2 << "です。\n";
 }
