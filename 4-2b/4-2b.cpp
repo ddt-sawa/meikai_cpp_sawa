@@ -1,5 +1,5 @@
 /*
- * 4-2b.cc
+ * 4-2b.cc*/
 
 /*演習4-2 以下のプログラムを作成せよ。
  b.unsigned型の最小値から最大値までの全整数値を8進数、10進数、16進数で表示。
@@ -16,14 +16,14 @@ using namespace std;
 int main()
 {
 	//unsigned int型の最小値から最大値まで表示
-    for (unsigned i = 0; ; i++){
+    for (unsigned CounterVariable = 0; ; CounterVariable++){
 
     	//8進数で表示
-    	cout << oct << i << '\n';
+    	cout << oct << CounterVariable << '\n';
     	//10進数で表示
-        cout << dec << i << '\n';
+        cout << dec << CounterVariable << '\n';
         //16進数で表示
-        cout << hex << i << '\n';
+        cout << hex << CounterVariable << '\n';
        }
 
 }
