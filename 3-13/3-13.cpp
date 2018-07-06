@@ -50,7 +50,7 @@ int main(){
 	cout << "身長 標準体重\n";
 
 	// 増分した身長が終了値に達するまで、標準体重を表示するループ文
-	for (int i = 0; i <= ((finishHeight - startHeight) / incrementValue); i++){
+	for (int counterHeight = 0; counterHeight <= ((finishHeight - startHeight) / incrementValue); counterHeight++){
 
 		//標準体重を表示
 		cout << currentHeight << "    " << (currentHeight - 100) * 0.9 <<'\n';
