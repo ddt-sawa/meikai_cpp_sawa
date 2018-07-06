@@ -14,7 +14,7 @@ using namespace std;
 int main()
 {
 	//カウントアップしたい整数値
-	int countNumber;
+	int upNumber;
 
 	//カウントアップすることを告知
 	cout << "0から入力された正の整数までカウントアップします。\n";
@@ -25,12 +25,12 @@ int main()
 		cout << "正の整数値 : ";
 
 		//整数値入力
-		cin >> countNumber;
+		cin >> upNumber;
 		//入力された値が正だった場合、ループを抜ける
-	}while (countNumber <= 0);
+	}while (upNumber <= 0);
 
     //表示値を正の整数になるまで一つずつ増やしていく
-	for (int i = 0; i <= countNumber; i++) {
-		cout << i << '\n';
+	for (int counterValiable = 0; counterValiable <= upNumber; counterValiable++) {
+		cout << counterValiable << '\n';
 	}
 }
