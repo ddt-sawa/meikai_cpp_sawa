@@ -14,21 +14,21 @@ using namespace std;
 int main()
 {
 	 //nの値
-	 int countNumber;
+	 int arithmeticNumber;
 
 	 //1からnまでの和
 	 int entireSum = 0;
 
 	 //nの入力を促す
 	 cout << "1からnまでの和を求めます。 n : ";
-	 cin >> countNumber;
+	 cin >> arithmeticNumber;
 
 	 // 1からnまでの値を
-	 for(int i = 1; i <= countNumber; i++)
+	 for(int counterValiable = 1; counterValiable <= arithmeticNumber; counterValiable++)
 
-		 //entireSumに加える
-		 entireSum += i;
+		 //合計に加える
+		 entireSum += counterValiable;
 
 	 //結果を表示
-     cout << "1から" << countNumber << "までの和は" << entireSum << "です。\n";
+     cout << "1から" << arithmeticNumber << "までの和は" << entireSum << "です。\n";
 }
