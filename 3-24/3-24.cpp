@@ -7,7 +7,7 @@
 
 
 /*演習3-24 合計だけでなく平均も求めるように、List3-17を書き換えたプログラムを作成せよ。
- * なお、読み込んだ負の数の工数は平均を求める際の分母から除外すること
+ * なお、読み込んだ負の数の個数は平均を求める際の分母から除外すること
  */
 #include<iostream>
 
@@ -15,28 +15,57 @@ using namespace std;
 
 int main()
 {
-	int n;
-	cout << "整数を加算します。\n";
-	cout << "何個加算しますか : ";
-	cin >> n;
+	//加算したい正の整数の個数
+	int integerNumber;
 
-	//平均を求めるためsumをdouble型変数に変更
-	double sum = 0;
-	double ave = 0;
+	//個数入力を促す
+	cout << "正の整数を加算します。\n" << "何個加算しますか : ";
 
-	for (int i = 1; i <= n; i++){
-		int t;
-		cout << "整数 : ";
-		cin >> t;
-		if (t < 0){
-			cout << "負の数は加算しません。\n";
-			//入力回数を1減らす
-			i--;
+	//個数入力
+	cin >> integerNumber;
+
+	//合計値
+	double entireSum = 0;
+
+	//平均値
+	double entireAverage = 0;
+
+	////正の整数を規定回数入力し、その合計と平均値を計算するループ文
+	for (int firstCounter = 1; firstCounter <= integerNumber; firstCounter++){
+
+		//加算したい正の整数
+		int positiveInteger;
+
+		//正の整数入力を促す
+		cout << "正の整数 : ";
+
+		//正の整数入力
+		cin >> positiveInteger;
+
+		//正でない数が入力された場合
+		if (positiveInteger <= 0){
+
+			//入力値を除外することを告知
+			cout << "負及び0は加算しません。\n";
+
+			//入力回数を1つ戻す
+			firstCounter--;
+
+			//次の行の合計値計算を飛ばす
 			continue;
 		}
-		sum += t;
-		ave = sum / i;
+
+		//合計に入力値を加算
+		entireSum += positiveInteger;
+
+		//平均を計算
+		entireAverage = entireSum / firstCounter;
+
 	}
-    cout << "合計は" << sum << "です。\n";
-    cout << "平均は" << ave << "です。\n";
+
+	//合計を表示
+    cout << "合計は" << entireSum << "です。\n";
+
+    //平均を表示
+    cout << "平均は" << entireAverage << "です。\n";
 }
