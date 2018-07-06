@@ -17,8 +17,11 @@ int main()
 {
 	//有効数字を6桁に設定
 	cout << fixed << setprecision(6);
-    //0-1まで0.001ずつインクリメントした値とその2乗を表示
-	for (float f = 0.0F; f <= 1.0F; f += 0.001F){
-		cout << f << "  " << f * f << '\n';
+
+    //0から1まで0.001ずつインクリメントした値とその2乗を表示するループ文
+	for (float floatCounter = 0.0F; floatCounter <= 1.0F; floatCounter += 0.001F){
+
+		//値をコンソール画面に出力
+		cout << floatCounter << "  " << floatCounter * floatCounter << '\n';
 	}
 }
