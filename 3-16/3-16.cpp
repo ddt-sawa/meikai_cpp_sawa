@@ -24,7 +24,8 @@ int main()
 	cin >> integerValue;
 
 	//1からnまでの2乗値を表示するループ文
-	for (int i = 1; i <= integerValue; i++)
+	for (int counterVariable = 1; counterVariable <= integerValue; counterVariable++) {
 		//2乗値を表示
-		cout << i << "の2乗は" << i * i << '\n';
+		cout << counterVariable << "の2乗は" << counterVariable * counterVariable << '\n';
+	}
 }
