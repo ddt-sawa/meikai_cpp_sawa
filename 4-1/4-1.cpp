@@ -17,18 +17,22 @@ using namespace std;
 
 int main()
 {
-	//調べたい文字を入力
-	char c;
+	//調べたい文字
+	char characterValue;
+
+	//文字入力を促す
 	cout << "文字種を調べたい文字を入力してください。";
-	cin >>c;
+
+	//文字入力
+	cin >> characterValue;
 
 	//文字種テスト関数の呼び出しを行い、引っかかった文字種の表示を行う。
-	if(iscntrl(c)) cout <<  "制御文字です\n";
-	else if(isdigit(c)) cout <<  "10進数字です\n";
-	else if(islower(c)) cout <<  "英小文字です\n";
-	else if(isprint(c)) cout <<  "空白文字です\n";
-	else if(ispunct(c)) cout <<  "空白類文字です\n";
-	else if(isupper(c)) cout << "英大文字です\n";
-	else if(isxdigit(c)) cout <<  "16進数字です\n";
+	if(iscntrl(characterValue)) cout <<  "制御文字です\n";
+	else if(isdigit(characterValue)) cout <<  "10進数字です\n";
+	else if(islower(characterValue)) cout <<  "英小文字です\n";
+	else if(isprint(characterValue)) cout <<  "空白文字です\n";
+	else if(ispunct(characterValue)) cout <<  "空白類文字です\n";
+	else if(isupper(characterValue)) cout << "英大文字です\n";
+	else if(isxdigit(characterValue)) cout <<  "16進数字です\n";
 
 }
