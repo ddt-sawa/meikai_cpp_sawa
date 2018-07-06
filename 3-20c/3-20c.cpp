@@ -27,15 +27,15 @@ int main()
 	cin >> stepNumber;
 
 	//n段の直角三角形を表示するループ文
-	for (int i = 1; i <= stepNumber; i++){
+	for (int firstCounter = 1; firstCounter <= stepNumber; firstCounter++){
 
 		//右下に直角を持ってくるため、段数 - i 個ぶんの空白文字を置くループ文
-		for (int j = 0; j < stepNumber - i; j++) {
+		for (int secondCounter = 0; secondCounter < stepNumber - firstCounter; secondCounter++) {
             //空白文字を表示
 			cout << ' ';
 		}
 		//i個の記号を表示するループ文
-		for (int j = 0; j < i; j++) {
+		for (int thirdCounter = 0; thirdCounter < firstCounter; thirdCounter++) {
 
             //記号を表示
 			cout << '*';
