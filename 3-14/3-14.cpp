@@ -23,15 +23,14 @@ int main()
 	//記号数が1以上の場合
 	if (symbolNumber >= 1){
 
-	//記号を表示するループ文(最初の改行を避けるため、i = 1からインクリメント)
-	    for (int i = 1; i <= symbolNumber; i++){
+	//記号を表示するループ文(最初の改行を避けるため、0ではなく1からインクリメント)
+	    for (int counterValiable = 1; counterValiable <= symbolNumber; counterValiable++){
 
 	    	//記号を表示
 		    cout << '*';
 
-		    //5の倍数個の時改行
-
-	        if ((i % 5) == 0) {
+		    //5の倍数回目の時改行
+	        if ((counterValiable % 5) == 0) {
         	cout << '\n';
 	        }
 	    }
