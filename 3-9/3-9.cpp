@@ -14,7 +14,7 @@ using namespace std;
 int main()
 {
 	//カウントダウンしたい整数値
-	int countNumber;
+	int downNumber;
 
 	//カウントダウンを告知
 	cout << "入力したい整数値をカウントダウンします。\n";
@@ -24,12 +24,12 @@ int main()
 		//正の整数値入力を促す
 		cout << "正の整数値 : ";
 		//整数値入力
-		cin >> countNumber;
+		cin >> downNumber;
 		//入力された値が正だった場合、ループを抜ける
-	}while (countNumber <= 0);
+	}while (downNumber <= 0);
 
 	//値を0になるまで一つずつ減らしていく
-	for (int i = 0; i <= countNumber; i++) {
-		cout << (countNumber - i) << '\n';
+	for (int counterValiable = 0; counterValiable <= downNumber; counterValiable++) {
+		cout << (downNumber - counterValiable) << '\n';
 	}
 }
