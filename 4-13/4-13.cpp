@@ -15,26 +15,43 @@ using namespace std;
 
 int main()
 {
-	//血液型を調べる列挙体の宣言
-	enum bloodgroup {a, b, ab, o, invalid};
-	int type;
+	//血液型を格納した列挙体の宣言
+	enum bloodGroup {aGroup, bGroup, abGroup, oGroup, invalidGroup};
 
-	//血液型の入力
+	//血液型選択に使う整数値
+	int choiceInteger;
+
+	//血液型を入力させるループ文
 	do {
-		cout << "血液型を入力してください。 (0 = 『A型』 1 =『B型  2 =『AB型』 3 =『O型』 4 =『終了』) ";
-				cin >> type;
-	}while (type < a || type > invalid);
 
-	//列挙子がinvalid以外の場合、型変換
-	if (type != invalid){
-		bloodgroup selected = static_cast<bloodgroup>(type);
+		//血液型に対応した整数値の入力を促す
+		cout << "血液型を入力してください。 (0 = 『A型』 1 =『B型』  2 =『AB型』 3 =『O型』 4 =『終了』) ";
 
-		//switch文で場合分け
-		switch (selected){
-		case a  : cout << "Ａ型ですね。\n"; break;
-		case b  : cout << "Ｂ型ですね。\n"; break;
-		case ab : cout << "ＡＢ型ですね。\n"; break;
-		case o  : cout << "Ｏ型ですね。\n"; break;
+		//整数値入力
+		cin >> choiceInteger;
+
+		//値が列挙子内の血液型を指すまで繰り返し
+	}while (choiceInteger < aGroup || choiceInteger > invalidGroup);
+
+	//選んだ列挙子が4 = 『invalidMark』でないとき
+	if (choiceInteger != invalidGroup){
+
+		//bloodGroup型変数に選んだ値をキャスト
+		bloodGroup userGroup = static_cast<bloodGroup>(choiceInteger);
+
+		////選んだ血液型毎に表示文を変更
+		switch (userGroup){
+		case aGroup  : cout << "Ａ型ですね。\n";   //0 = 『A型』
+		break;
+
+		case bGroup  : cout << "Ｂ型ですね。\n";   //1 =『B型』
+		break;
+
+		case abGroup : cout << "ＡＢ型ですね。\n"; //2 =『AB型』
+		break;
+
+		case oGroup  : cout << "Ｏ型ですね。\n";   //3 =『O型』
+		break;
 		}
 	}
 }
