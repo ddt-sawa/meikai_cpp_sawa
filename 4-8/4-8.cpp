@@ -19,20 +19,20 @@ using namespace std;
 
 int main()
 {
-    int i; double d;
+    int intergerVariable; double doubleVariable;
 
     //int + int  表示結果 4 i
-    cout << sizeof(i + i) << " " << typeid(i + i).name() << '\n';
+    cout << sizeof(intergerVariable + intergerVariable) << " " << typeid(intergerVariable + intergerVariable).name() << '\n';
 
-    //double + double 表示結果 8 d
-    cout << sizeof(d + d) << " " << typeid(d + d).name() << '\n';
+    //double + double 表示結果 8 doubleVariable
+    cout << sizeof(doubleVariable + doubleVariable) << " " << typeid(doubleVariable + doubleVariable).name() << '\n';
 
 
-    //int + double 表示結果 8 d
-    cout << sizeof(i + d) << " " << typeid(i + d).name() << '\n';
+    //int + double 表示結果 8 doubleVariable
+    cout << sizeof(intergerVariable + doubleVariable) << " " << typeid(intergerVariable + doubleVariable).name() << '\n';
 
     //double + int 表示結果 8 d
-    cout << sizeof(d + i) << " " << typeid(d + i).name() << '\n';
+    cout << sizeof(doubleVariable + intergerVariable) << " " << typeid(doubleVariable + intergerVariable).name() << '\n';
 }
 
 /*実行結果により、int型とdouble型の演算ではdouble型に暗黙の型変換が
