@@ -24,8 +24,8 @@ int main()
 	cin >> stepNumber;
 
 	//n×nマス（正方形）上にアスタリスクを表示
-	for (int i = 1; i <= stepNumber; i++){
-		for (int j = 1; j <= stepNumber; j++) {
+	for (int firstCounter = 1; firstCounter <= stepNumber; firstCounter++){
+		for (int secondCounter = 1; secondCounter <= stepNumber; secondCounter++) {
 			cout << '*';
 		}
 		//段数を変えるため改行
