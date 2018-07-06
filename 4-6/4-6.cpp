@@ -14,10 +14,10 @@ using namespace std;
 int main()
 {
 	//三種類の浮動小数点型の大きさを表示
-	cout << "float型 : "<< sizeof(float) << '\n';
+	cout << "float型 : "<< sizeof(float) << '\n';                //4バイト
 
-	cout << "double型 : "<< sizeof(double) << '\n';
+	cout << "double型 : "<< sizeof(double) << '\n';              //8バイト
 
-	cout << "long double型 : "<< sizeof(long double) << '\n';
+	cout << "long double型 : "<< sizeof(long double) << '\n';   //16バイト
 
 }
