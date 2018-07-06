@@ -16,26 +16,34 @@ using namespace std;
 
 int main()
 {
-	//ピラミッドの段数(n)を入力させる
-    int n;
+	//ピラミッドの段数
+    int stepNumber;
+
+    //段数入力を促す
     cout << "段数 : ";
-	cin >> n;
 
-	//以下の処理をn回繰り返す
-    for (int i = 1 ; i <= n; i++){
+    //段数入力
+	cin >> stepNumber;
 
-    	//n-1個の空白文字を置く
-    	for(int j = 1; j <= (n - i); j++)
+	//ピラミッド上に記号を配置するためのループ文
+    for (int firstCounter = 1 ; firstCounter <= stepNumber; firstCounter++){
+
+    	//段目 - 1個の空白文字を置く
+    	for(int secondCounter = 1; secondCounter <= (stepNumber - firstCounter); secondCounter++) {
     		cout << ' ';
+    	}
 
-        //(i-1)*2+1個のアスタリスクを置く
-    	for(int j = 1; j <= (i - 1) * 2 + 1; j++)
+        //(段目 - 1) * 2 + 1個のアスタリスクを置く
+    	for(int thirdCounter = 1; thirdCounter <= (firstCounter - 1) * 2 + 1; thirdCounter++) {
     		cout << '*';
+    	}
 
-    	//n-1個の空白文字を置く
-    	for(int j = 1; j <= (n - i); j++)
+    	//段目 - 1個の空白文字を置く
+    	for(int forthCounter = 1; forthCounter <= (stepNumber - firstCounter); forthCounter++) {
     		cout << ' ';
+    	}
 
+    	//段数を変えるため改行
     	cout << '\n';
     }
 }
