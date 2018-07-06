@@ -14,30 +14,26 @@ using namespace std;
 
 int main()
 {
-	//記号数個数
+	//記号数
 	int symbolValue;
 
+	//記号数入力を促す
+	cout << "何個*を表示しますか : ";
+
 	//記号数入力
-	cout << "何個*を表示しますか : ";  cin >> symbolValue;
+	cin >> symbolValue;
 
-	//記号数が1以上のとき
-	if (symbolValue > 0){
+	//記号数が1以上の場合のみ改行及び記号の表示を行う
+	if (symbolValue >= 1) {
 
-	    //繰り返しを制御する整数iを初期化
-	    int i = 0;
+		//記号数ぶん記号を表示するループ文
+	    for (int counterValiable = 0; counterValiable < symbolValue; counterValiable++) {
 
-	    //記号数ぶんだけ以下の処理を繰り返す
-	    while (i < symbolValue) {
-
-	    	//記号を1つ表示
-		    cout << '*';
-
-		    //試行回数を制御する整数iをインクリメント
-		    i++;
+	    	//記号を表示
+	    	cout << '*';
 	    }
 	    // 記号数が1以上の場合のみ改行を行う
-    cout << '\n';
-
+        cout << '\n';
     }
 
 }
