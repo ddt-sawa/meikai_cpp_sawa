@@ -19,22 +19,26 @@ using namespace std;
 
 int main()
 {
-	//以下の浮動小数を有効数字6桁で表現
+	//浮動小数を有効数字6桁で表現することを宣言し、レイアウトを整える
 	cout << fixed << setprecision(6) << "  float        int\n";
 	//仕切り
 	cout << "_________________________\n";
 
-    //float型の計算に用いるxを宣言
-	float x = 0;
+    //float型の変数を0.001ずつ増やしていった総和
+	float floatSum = 0;
 
-	for (int i = 00; i <= 1000; i++){
+	for (int counterVariable = 00; counterVariable <= 1000; counterVariable++){
 
 		//float型で0.001ずつインクリメント
-		cout << x << "    ";
-		x += 0.001F;
+		cout << floatSum << "    ";
 
-		//int型を1000で割った数値(0.001)ずつインクリメント
-		float y = static_cast<double>(i) / 1000;
-		cout <<  y << '\n';
+		//float型の表示
+		floatSum += 0.001F;
+
+		//int型を1000で割った数値(0.001)ずつインクリメントした値
+		float intSum = static_cast<double>(counterVariable) / 1000;
+
+		//int型の表示
+		cout <<  intSum << '\n';
 	}
 }
