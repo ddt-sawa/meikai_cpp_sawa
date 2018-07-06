@@ -15,7 +15,7 @@ using namespace std;
 int main()
 {
 	//nの値
-	 int countNumber;
+	 int arithmeticNumber;
 
 	 //1からnまでの和
 	 int entireSum = 0;
@@ -24,16 +24,16 @@ int main()
 	 cout << "nの値 : ";
 
 	 //入力
-	 cin >> countNumber;
+	 cin >> arithmeticNumber;
 
 	 // 1からnまでの和を計算するfor文
-	 for(int i = 1; i <= countNumber; i++){
+	 for(int counterValiable = 1; counterValiable <= arithmeticNumber; counterValiable++){
 
 		 // 現在加える値を表示
-		 cout << i;
+		 cout << counterValiable;
 
 		 //値が全体の最後尾の場合
-		 if (i < countNumber)
+		 if (counterValiable < arithmeticNumber)
 
 			 //" + "を表示する
 			 cout << " + ";
@@ -45,7 +45,7 @@ int main()
 			 cout << " = ";
 
 		 //合計に値を加える
-		 entireSum += i;
+		 entireSum += counterValiable;
 	 }
 	 //結果を表示
      cout << entireSum << "\n";
