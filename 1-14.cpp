@@ -27,11 +27,11 @@ int main()
 	cin >> firstNumber;
 
 	//乱数テーブルを設定
-    srand(time(NULL));
+	srand(time(NULL));
 
-    //0～10の乱数を生成
-    int randomNumber = rand() % 11;
+	//0～10の乱数を生成
+	int randomNumber = rand() % 11;
 
-    //入力した整数値から5を減じ、乱数を加えた値を表示(増減値は±5)
-    cout << "その値の±5の乱数を生成しました。それは" << firstNumber - 5 + randomNumber  << "です。";
+	//入力した整数値から5を減じ、乱数を加えた値を表示(増減値は±5)
+	cout << "その値の±5の乱数を生成しました。それは" << firstNumber - 5 + randomNumber  << "です。";
 }
