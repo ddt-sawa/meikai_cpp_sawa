@@ -15,25 +15,25 @@ using namespace std;
 
 int main()
 {
-	//整数値の宣言
+	//整数値を宣言
 	int firstNumber, secondNumber;
 
-    cout << "整数x : "; cin >> firstNumber;    //整数xの入力
-    cout << "整数y : "; cin >> secondNumber;   //整数yの入力
+	cout << "整数x : "; cin >> firstNumber;    //整数xの入力
+	cout << "整数y : "; cin >> secondNumber;   //整数yの入力
 
-    //二値の差を求める
-    int balance = (firstNumber > secondNumber ? (firstNumber - secondNumber) : (secondNumber - firstNumber));
+	//二値の差を求める
+	int valueBalance = (firstNumber > secondNumber ? (firstNumber - secondNumber) : (secondNumber - firstNumber));
 
-    //二値の差が10以下の場合
-    if (balance <= 10){
-    	//差が10以下であることを表示
-    	cout << "それらの差は10以下です。\n";
-    }
+	//二値の差が10以下の場合
+	if (valueBalance <= 10){
+		//差が10以下であることを表示
+		cout << "それらの差は10以下です。\n";
+	}
 
-    //二値の差が11以上の場合
-    else {
-    	//差が11以上であることを表示
-    	cout << "それらの差は11以上です。\n";
-    }
+	//二値の差が11以上の場合
+	else {
+		//差が11以上であることを表示
+		cout << "それらの差は11以上です。\n";
+	}
 }
 
