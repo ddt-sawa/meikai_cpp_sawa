@@ -24,23 +24,23 @@ int main()
 	//得点入力
 	cin >> userScore;
 
-		//得点が0-59の場合
-		if (userScore >= 0 && userScore <= 59){
-			cout << "不可\n";
-		}
+	//得点が0-59の場合
+	if (userScore >= 0 && userScore <= 59){
+		cout << "不可\n";
+	}
 
-		//60-69の場合
-		else if (userScore >= 60 && userScore <= 69){
-			cout << "可\n";
-		}
+	//60-69の場合
+	else if (userScore >= 60 && userScore <= 69){
+		cout << "可\n";
+	}
 
-		//70-79の場合
-		else if (userScore >= 70 && userScore <= 79){
-			cout << "良\n";
-		}
+	//70-79の場合
+	else if (userScore >= 70 && userScore <= 79){
+		cout << "良\n";
+	}
 
-		//80-89の場合
-		else if (userScore >= 80 && userScore <= 100){
-			cout << "優\n";
-		}
+	//80-89の場合
+	else if (userScore >= 80 && userScore <= 100){
+		cout << "優\n";
+	}
 }
