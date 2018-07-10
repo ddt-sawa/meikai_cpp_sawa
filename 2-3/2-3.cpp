@@ -28,7 +28,7 @@ int main()
 	cout << "bの値を入力してください : ";
 
 	//入力された整数値を読み込む
-    cin >> secondNumber;
+	cin >> secondNumber;
 
 	//一つ目の値の方が大きかった場合『aの方が大きいです。』を表示
 	if (firstNumber > secondNumber) {
@@ -40,9 +40,9 @@ int main()
 		cout << "bの方が大きいです。\n";
 	}
 
-    // 両整数が等しい場合『aとbは同じ値です。』を表示
+	// 両整数が等しい場合『aとbは同じ値です。』を表示
 	else if (firstNumber == secondNumber) {
-			cout << "aとbは同じ値です。\n";
+		cout << "aとbは同じ値です。\n";
 	}
 }
 
