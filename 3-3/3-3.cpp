@@ -14,23 +14,29 @@ using namespace std;
 
 int main()
 {
-	//int型変数x,yの宣言
-    int x, y;
+	//2整数の宣言
+	int firstNumber, secondNumber;
 
-    // 実数値の入力を促し、読み込む
-    cout << "整数x : "; cin >> x;
-    cout << "整数y : "; cin >> y;
+	cout << "整数x : ";  //整数xの宣言
+	cin >> firstNumber;  //整数xの入力
 
+	cout << "整数y : ";  //整数yの宣言
+	cin >> secondNumber; //整数yの入力
 
-    //大きい数をxに、小さい数をyに移動
-    if (x < y){
-    	int t = x;
-    	x = y;
-    	y = t;
-    }
+	//整数xが整数yより大きい場合
+	if (firstNumber < secondNumber){
 
-    //x == yになるまで、yに1を加え表示を続ける
-    do{
-    	cout << y++ << " ";
-    }while(x >= y);
+		//2整数の値を交換
+		int tradeNumber = firstNumber;  //整数xの値を保存し
+		firstNumber = secondNumber;     //整数xに実数yを代入し
+		secondNumber = tradeNumber;     //整数yに実数xを代入する
+	}
+
+	//小さい整数から大きい整数までの全整数を小さい順に表示するdo文
+	do{
+		//整数yを表示した後インクリメントを行い、
+		cout << secondNumber++ << " ";
+
+		//整数x == 整数yになるまでループを続ける
+	}while(firstNumber >= secondNumber);
 }
