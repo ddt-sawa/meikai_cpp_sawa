@@ -13,11 +13,11 @@ using namespace std;
 
 int main()
 {
-	// int型変数に実数値の初期化子を与える
-	int x = 7.3;
-	//標準出力ストリームを用いて、xの値をコンソールに出力
-    cout << x;
+	//int型変数に実数値の初期化子を与える
+	int integerNumber = 7.3;
 
+	//標準出力ストリームを用いて、xの値をコンソールに出力
+	cout << integerNumber;
 }
 
 // 小数点部が切り捨てされた "7"の出力を確認
