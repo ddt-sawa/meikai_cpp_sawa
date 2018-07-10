@@ -14,23 +14,23 @@ using namespace std;
 int main()
 {
 	//二つの実数値を宣言
-    double firstNumber, secondNumber;
+	double firstNumber, secondNumber;
 
-    //一つ目の実数値の入力を促す
-    cout << "実数x : ";
+	//一つ目の実数値の入力を促す
+	cout << "実数x : ";
 
-    //実数値の入力
-    cin >> firstNumber;
+	//実数値の入力
+	cin >> firstNumber;
 
-    //二つ目の実数値の入力を促す
-    cout << "実数y : ";
+	//二つ目の実数値の入力を促す
+	cout << "実数y : ";
 
-    //実数値の入力
-    cin >> secondNumber;
+	//実数値の入力
+	cin >> secondNumber;
 
-    //条件式を用いて、大きい方の値を最大値(max)とする
-    double max = firstNumber > secondNumber ? firstNumber : secondNumber;
+	//条件式を用いて、大きい方の値を最大値(max)とする
+	double max = firstNumber > secondNumber ? firstNumber : secondNumber;
 
-    //最大値の表示
-    cout << "大きい方の値は" << max << "です。\n";
+	//最大値の表示
+	cout << "大きい方の値は" << max << "です。\n";
 }
