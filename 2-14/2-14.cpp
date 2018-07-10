@@ -18,21 +18,21 @@ using namespace std;
 int main()
 {
 	//じゃんけんの手を表示することの告知
-	 cout << "ランダムにじゃんけんの手を表示します。\n";
+	cout << "ランダムにじゃんけんの手を表示します。\n";
 
-	 //乱数テーブルを用意
-     srand(time(NULL));
+	//乱数テーブルを用意
+	srand(time(NULL));
 
-     //0～2の乱数を生成
-     int randomNumber = rand() % 3;
+	//0～2の乱数を生成
+	int randomNumber = rand() % 3;
 
-     //乱数の値によって表示する手を変更
-     switch (randomNumber){
-      case 0 : {cout << "グー\n";}       //0 = グー
-      break;
-      case 1 : {cout << "チョキ\n";}     //1 = チョキ
-      break;
-      case 2 : {cout << "パー\n";}      //2 = パー
-      break;
-     }
+	//乱数の値によって表示する手を変更
+	switch (randomNumber){
+	case 0 : {cout << "グー\n";}       //0 = グー
+	break;
+	case 1 : {cout << "チョキ\n";}     //1 = チョキ
+	break;
+	case 2 : {cout << "パー\n";}       //2 = パー
+	break;
+	}
 }
