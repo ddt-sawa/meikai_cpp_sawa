@@ -32,18 +32,16 @@ int main()
 	//配列に表示する記号数を走査代入するためのループ文
 	for (int firstCounter = 0; firstCounter < arrayNumber; firstCounter++){
 
-		//表示する記号数として0-10の乱数を設定する
-		int symbolNumber  = rand() % 11;
 
 		//配列に記号数を走査代入する
-		intArray[firstCounter] = symbolNumber;
+		intArray[firstCounter] = rand() % 11;
 
 
 		//レイアウトを整えるため、配列の添え字を2列かつ右寄せで表示する
 	    cout << "intArray["  << setw(2) << right << firstCounter << internal  <<"]" <<  " : ";
 
 	    //棒グラフ状に記号を表示するループ文
-	    for (int secondCounter = 0; secondCounter < symbolNumber; secondCounter++) {
+	    for (int secondCounter = 0; secondCounter < intArray[firstCounter]; secondCounter++) {
 
 	    	//記号を表示
 	    	cout << '*';
