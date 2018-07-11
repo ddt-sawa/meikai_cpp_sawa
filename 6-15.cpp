@@ -17,6 +17,12 @@
 
 using namespace std;
 
+//関数名         : spendTime
+//仕様           : 進めたい分数だけ時刻を進める
+//引数           : int型変数inputHour(時数)、inputMinute(分数)、plusMinute(進めたい分数)
+//返り値         : なし
+//作成者         : sawa
+//日付           : 7/11
 void spendTime(int& inputHour, int& inputMinute, int plusMinute)
 {
 	//分数から時数の繰り上げが何回起こったかを保存する変数
