@@ -17,29 +17,30 @@ using namespace std;
 int main()
 {
 	//ピラミッドの段数
-    int stepNumber;
+	int stepNumber;
 
-    //段数入力を促す
-    cout << "段数 : ";
+	//段数入力を促す
+	cout << "段数 : ";
 
-    //段数入力
+	//段数入力
 	cin >> stepNumber;
 
 	//ピラミッド上に記号を配置するためのループ文
-    for (int firstCounter = 1 ; firstCounter <= stepNumber; firstCounter++){
+	for (int firstCounter = 1 ; firstCounter <= stepNumber; ++firstCounter){
 
-    	//段目 - 1個の空白文字を置く
-    	for(int secondCounter = 1; secondCounter <= (firstCounter - 1); secondCounter++) {
-    		cout << ' ';
-    	}
+		//段目 - 1個の空白文字を置く
+		for(int secondCounter = 1; secondCounter <= (firstCounter - 1); ++secondCounter) {
+			cout << ' ';
+		}
 
-        //(段数 - 段目)*2+1個の数字を置く
-    	for(int thirdNumber = 1; thirdNumber <= (stepNumber - firstCounter) * 2 + 1; thirdNumber++) {
-    		//置く数字(段目 % 10)を計算
-    		cout << firstCounter % 10;
-    	}
+		//(段数 - 段目)* 2 + 1個の数字を置く
+		for(int thirdNumber = 1; thirdNumber <= (stepNumber - firstCounter) * 2 + 1; ++thirdNumber) {
 
-    	//段数を変えるため改行
-    	cout << '\n';
-    }
- }
+			//置く数字(段目 % 10)を計算
+			cout << firstCounter % 10;
+		}
+
+		//段数を変えるため改行
+		cout << '\n';
+	}
+}
