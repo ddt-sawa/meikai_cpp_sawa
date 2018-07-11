@@ -23,23 +23,25 @@ int main()
 	//記号数入力
 	cin >> symbolNumber;
 
-	    //入力した記号数に達するまで記号を表示するループ文
-    	for (int counterValiable = 1; counterValiable <= symbolNumber; counterValiable++) {
+	//入力した記号数に達するまで記号を表示するループ文
+	for (int counterVariable = 1; counterVariable <= symbolNumber; ++counterVariable) {
 
-    		//表示が奇数回目の場合
-    		if (counterValiable % 2 == 1) {
-    			//'+'を表示
-    			cout << '+';
-    		}
+		//表示が奇数回目の場合
+		if (counterVariable % 2 == 1) {
 
-    		//表示が偶数回目の場合
-    		else {
-    			//'-'を表示
-    			cout << '-';
-    		}
+			//'+'を表示
+			cout << '+';
+		}
 
-        }
+		//表示が偶数回目の場合
+		else {
 
-    //改行
-   	cout << '\n';
+			//'-'を表示
+			cout << '-';
+		}
+
+	}
+
+	//改行
+	cout << '\n';
 }
