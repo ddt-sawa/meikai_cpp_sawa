@@ -14,23 +14,27 @@ using namespace std;
 
 int main()
 {
-	//int型変数xの宣言
-	int x;
+	//カウントダウンしたい整数の宣言
+	int firstNumber;
 
-	//数を一つずつ減らしていくことを告知
-	cout << "カウントダウンします。";
+	//カウントダウン告知
+	cout << "入力された整数をカウントダウンします。";
 
-	// 正の整数値が入力されるまで、入力を促す
+	// 正の整数を入力させるためのdo文
 	do{
-		cout << "正の整数値 : ";
-		cin >> x;
-	}while (x <= 0);
+		//整数の入力
+		cout << "正の整数値 : "; cin >> firstNumber;
 
-	//xの値を0になるまで一つずつ減らしていく
-	while (x >= 0){
-		cout << x << "\n";
-		x--;
+		//正の整数が入力されるまで再試行
+	}while (firstNumber <= 0);
+
+	//整数の値を0になるまで一つずつ減らしていくwhile文
+	while (firstNumber >= 0){
+		//カウントダウンを表示しつつ
+		cout << firstNumber << "\n";
+		//整数をデクリメント
+		--firstNumber;
 	}
-	//while文終了時のxの値を確認
-	cout << "終了時のxの値は" << x << "です。\n";
+	//while文終了時の整数値を確認 (-1)
+	cout << "終了時の整数の値は" << firstNumber << "です。\n";
 }
