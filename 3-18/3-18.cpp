@@ -17,13 +17,13 @@ using namespace std;
 int main ()
 {
 	//for文を用いて九九の総当たり計算を行うループ文（段）
-	for (int i = 1; i <= 9; i++){
+	for (int firstCounter = 1; firstCounter <= 9; ++firstCounter){
 
 		//for文を用いて九九の総当たり計算を行うループ文（掛）
-		for(int j = 1; j <= 9; j++){
+		for(int secondCounter = 1; secondCounter <= 9; ++secondCounter){
 
 			//段×掛の答えを表示
-			int multiplicationTable = i * j;
+			int multiplicationTable = firstCounter * secondCounter;
 
 			//1桁の時は空白文字を前方に2つ置く
 			if (multiplicationTable < 10) {
