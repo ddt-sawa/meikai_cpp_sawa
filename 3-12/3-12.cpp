@@ -15,40 +15,42 @@ using namespace std;
 int main()
 {
 	//nの値
-	 int arithmeticNumber;
+	int arithmeticNumber;
 
-	 //1からnまでの和
-	 int entireSum = 0;
+	//1からnまでの和
+	int entireSum = 0;
 
 	//nの入力を促す
-	 cout << "nの値 : ";
+	cout << "nの値 : ";
 
-	 //入力
-	 cin >> arithmeticNumber;
+	//入力
+	cin >> arithmeticNumber;
 
-	 // 1からnまでの和を計算するfor文
-	 for(int counterValiable = 1; counterValiable <= arithmeticNumber; counterValiable++){
+	// 1からnまでの和を計算するfor文
+	for(int counterVariable = 1; counterVariable <= arithmeticNumber; ++counterVariable){
 
-		 // 現在加える値を表示
-		 cout << counterValiable;
+		// 現在加える値を表示
+		cout << counterVariable;
 
-		 //値が全体の最後尾の場合
-		 if (counterValiable < arithmeticNumber)
+		//値が全体の最後尾の場合
+		if (counterVariable < arithmeticNumber) {
 
-			 //" + "を表示する
-			 cout << " + ";
+			//" + "を表示する
+			cout << " + ";
+		}
 
-		 //値が全体の最後尾の場合
-		 else
+		//値が全体の最後尾の場合
+		else {
 
-			 //" = "を表示する
-			 cout << " = ";
+			//" = "を表示する
+			cout << " = ";
+		}
 
-		 //合計に値を加える
-		 entireSum += counterValiable;
-	 }
-	 //結果を表示
-     cout << entireSum << "\n";
+		//合計に値を加える
+		entireSum += counterVariable;
+	}
+	//結果を表示
+	cout << entireSum << "\n";
 }
 
 
