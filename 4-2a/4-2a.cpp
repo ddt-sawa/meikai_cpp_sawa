@@ -18,14 +18,14 @@ using namespace std;
 int main()
 {
 	//int型の最小値から最大値まで表示
-    for (int counterVariable = INT_MIN; ; counterVariable++){
+	for (int counterVariable = INT_MIN; ; ++counterVariable){
 
-    	//8進数で表示
-    	cout << oct << counterVariable << '\n';
-    	//10進数で表示
-        cout << dec << counterVariable << '\n';
-        //16進数で表示
-        cout << hex << counterVariable << '\n';
-       }
+		//8進数で表示
+		cout << oct << counterVariable << '\n';
+		//10進数で表示
+		cout << dec << counterVariable << '\n';
+		//16進数で表示
+		cout << hex << counterVariable << '\n';
+	}
 
 }
