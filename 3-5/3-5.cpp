@@ -27,13 +27,14 @@ int main()
 	if (symbolValue >= 1) {
 
 		//記号数ぶん記号を表示するループ文
-	    for (int counterValiable = 0; counterValiable < symbolValue; counterValiable++) {
+		for (int counterVariable = 0; counterVariable < symbolValue; ++counterVariable) {
 
-	    	//記号を表示
-	    	cout << '*';
-	    }
-	    // 記号数が1以上の場合のみ改行を行う
-        cout << '\n';
-    }
+			//記号を表示
+			cout << '*';
+		}
+
+		// 記号数が1以上の場合のみ改行を行う
+		cout << '\n';
+	}
 
 }
