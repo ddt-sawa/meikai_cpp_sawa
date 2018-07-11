@@ -14,14 +14,14 @@ int main()
 	//0.0を表示するため、fixed関数と setprecision関数を使用
 	cout << fixed << setprecision(1);
 
-     //double型配列の要素数
+	//double型配列の要素数
 	const int arrayNumber = 5;
 
 	//配列の全要素に0.0を代入
 	double doubleArray[arrayNumber] = {0.0, 0.0, 0.0, 0.0, 0.0};
 
 	//配列を走査表示するループ文
-	for (int counterVariable = 0; counterVariable < arrayNumber; counterVariable++) {
+	for (int counterVariable = 0; counterVariable < arrayNumber; ++counterVariable) {
 
 		//指定された配列の要素を表示する
 		cout << doubleArray[counterVariable] << '\n';
