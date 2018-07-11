@@ -23,18 +23,18 @@ int main()
 	//記号数が1以上の場合
 	if (symbolNumber >= 1){
 
-	//記号を表示するループ文(最初の改行を避けるため、0ではなく1からインクリメント)
-	    for (int counterValiable = 1; counterValiable <= symbolNumber; counterValiable++){
+		//記号を表示するループ文(最初の改行を避けるため、0ではなく1からインクリメント)
+		for (int counterVariable = 1; counterVariable <= symbolNumber; ++counterVariable){
 
-	    	//記号を表示
-		    cout << '*';
+			//記号を表示
+			cout << '*';
 
-		    //5の倍数回目の時改行
-	        if ((counterValiable % 5) == 0) {
-        	cout << '\n';
-	        }
-	    }
-	    //改行
-	    cout << '\n';
+			//5の倍数回目の時改行
+			if ((counterVariable % 5) == 0) {
+				cout << '\n';
+			}
+		}
+		//改行
+		cout << '\n';
 	}
 }
