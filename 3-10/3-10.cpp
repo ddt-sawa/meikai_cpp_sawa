@@ -29,8 +29,8 @@ int main()
 		//入力された値が正だった場合、ループを抜ける
 	}while (upNumber <= 0);
 
-    //表示値を正の整数になるまで一つずつ増やしていく
-	for (int counterValiable = 0; counterValiable <= upNumber; counterValiable++) {
-		cout << counterValiable << '\n';
+	//表示値を正の整数になるまで一つずつ増やしていく
+	for (int firstCounter = 0; firstCounter <= upNumber; ++firstCounter) {
+		cout << firstCounter << '\n';
 	}
 }
