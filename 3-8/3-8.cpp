@@ -27,12 +27,12 @@ int main()
 	//記号数が1以上の場合
 	if (symbolNumber >= 1){
 
-	//以下の処理を記号数ぶん繰り返す
-	    for (int i = 0; i < symbolNumber; i++) {
-		    cout << '*';
-	    }
+		//以下の処理を記号数ぶん繰り返す
+		for (int firstCounter = 0; firstCounter < symbolNumber; ++firstCounter) {
+			cout << '*';
+		}
 
-	    //記号数が1以上の場合のみ改行
-	    cout << '\n';
+		//記号数が1以上の場合のみ改行
+		cout << '\n';
 	}
 }
