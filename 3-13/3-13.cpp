@@ -44,13 +44,13 @@ int main(){
 	cin >> incrementValue;
 
 	//表示する身長を開始値で初期化
-    int currentHeight = startHeight;
+	int currentHeight = startHeight;
 
-    //表示画面のレイアウトを整える
+	//表示画面のレイアウトを整える
 	cout << "身長 標準体重\n";
 
 	// 増分した身長が終了値に達するまで、標準体重を表示するループ文
-	for (int counterHeight = 0; counterHeight <= ((finishHeight - startHeight) / incrementValue); counterHeight++){
+	for (int counterHeight = 0; counterHeight <= ((finishHeight - startHeight) / incrementValue); ++counterHeight){
 
 		//標準体重を表示
 		cout << currentHeight << "    " << (currentHeight - 100) * 0.9 <<'\n';
