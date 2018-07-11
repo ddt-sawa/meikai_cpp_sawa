@@ -27,17 +27,17 @@ int main()
 	srand(time(NULL));
 
 	//配列に表示する記号数を走査代入するためのループ文
-	for(int firstCounter = 0; firstCounter < arrayNumber; firstCounter++){
+	for(int firstCounter = 0; firstCounter < arrayNumber; ++firstCounter){
 
 		//配列に記号数を走査代入する
 		intArray[firstCounter] = rand() % 11;
 	}
 
 	//配列の値が1-10以上かどうかを調べるループ分
-	for (int firstCounter = 10; firstCounter > 0; firstCounter--) {
+	for (int firstCounter = 10; firstCounter > 0; --firstCounter) {
 
 		//配列の要素を走査するループ文
-		for (int secondCounter = 0; secondCounter < arrayNumber; secondCounter++) {
+		for (int secondCounter = 0; secondCounter < arrayNumber; ++secondCounter) {
 
 			//配列の要素が現在走査中の数字以上の場合
 			if (firstCounter <= intArray[secondCounter]) {
@@ -54,17 +54,17 @@ int main()
 			}
 		}
 		//縦方向の棒グラフを作るため改行
-	    cout << '\n';
+		cout << '\n';
 	}
 
 	//レイアウトを整える
 	cout << "______________________________________________\n";
 
 	//配列の添え字を10で割った剰余を表示するためのループ文
-	for (int firstCounter = 0; firstCounter < arrayNumber; firstCounter++) {
+	for (int firstCounter = 0; firstCounter < arrayNumber; ++firstCounter) {
 
-	//添え字の剰余を表示
-	cout << ' ' << firstCounter % 10 << ' ';
+		//添え字の剰余を表示
+		cout << ' ' << firstCounter % 10 << ' ';
 	}
 }
 
