@@ -26,7 +26,7 @@ int main()
 	cout << "元々の配列はa[6] = {5, 10, 15, 20, 25, 30}です。\n" << "逆順にコピーした配列b[6]を表示します。\n";
 
 	//配列aを逆順にコピーするループ文
-	for (int firstCounter = 0; firstCounter < arrayNumber; firstCounter++){
+	for (int firstCounter = 0; firstCounter < arrayNumber; ++firstCounter){
 
 		//配列aを配列bに逆順コピーする
 		secondArray[firstCounter] = firstArray[(arrayNumber - firstCounter - 1)];
