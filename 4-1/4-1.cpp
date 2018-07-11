@@ -27,12 +27,40 @@ int main()
 	cin >> characterValue;
 
 	//文字種テスト関数の呼び出しを行い、引っかかった文字種の表示を行う。
-	if(iscntrl(characterValue)) cout <<  "制御文字です\n";
-	else if(isdigit(characterValue)) cout <<  "10進数字です\n";
-	else if(islower(characterValue)) cout <<  "英小文字です\n";
-	else if(isprint(characterValue)) cout <<  "空白文字です\n";
-	else if(ispunct(characterValue)) cout <<  "空白類文字です\n";
-	else if(isupper(characterValue)) cout << "英大文字です\n";
-	else if(isxdigit(characterValue)) cout <<  "16進数字です\n";
+
+	//制御文字判定
+	if(iscntrl(characterValue)) {
+		cout <<  "制御文字です\n";
+	}
+
+	//10進数字判定
+	else if(isdigit(characterValue)) {
+		cout <<  "10進数字です\n";
+	}
+
+	//英小文字判定
+	else if(islower(characterValue)) {
+		cout <<  "英小文字です\n";
+	}
+
+	//空白文字判定
+	else if(isprint(characterValue)) {
+		cout <<  "空白文字です\n";
+	}
+
+	//空白類文字判定
+	else if(ispunct(characterValue)) {
+		cout <<  "空白類文字です\n";
+	}
+
+	//英大文字判定
+	else if(isupper(characterValue)) {
+		cout << "英大文字です\n";
+	}
+
+	//16進数字判定
+	else if(isxdigit(characterValue)) {
+		cout <<  "16進数字です\n";
+	}
 
 }
