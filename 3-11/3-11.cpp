@@ -13,22 +13,23 @@ using namespace std;
 
 int main()
 {
-	 //nの値
-	 int arithmeticNumber;
+	//nの値
+	int arithmeticNumber;
 
-	 //1からnまでの和
-	 int entireSum = 0;
+	//1からnまでの和
+	int entireSum = 0;
 
-	 //nの入力を促す
-	 cout << "1からnまでの和を求めます。 n : ";
-	 cin >> arithmeticNumber;
+	//nの入力を促す
+	cout << "1からnまでの和を求めます。 n : ";
+	cin >> arithmeticNumber;
 
-	 // 1からnまでの値を
-	 for(int counterValiable = 1; counterValiable <= arithmeticNumber; counterValiable++)
+	// 1からnまでの値を計算するループ
+	for(int counterVariable = 1; counterVariable <= arithmeticNumber; ++counterVariable) {
 
-		 //合計に加える
-		 entireSum += counterValiable;
+		//値を合計に加える
+		entireSum += counterVariable;
+	}
 
-	 //結果を表示
-     cout << "1から" << arithmeticNumber << "までの和は" << entireSum << "です。\n";
+	//結果を表示
+	cout << "1から" << arithmeticNumber << "までの和は" << entireSum << "です。\n";
 }
