@@ -27,7 +27,7 @@ int main()
     //float型の変数を0.001ずつ増やしていった総和
 	float floatSum = 0;
 
-	for (int counterVariable = 00; counterVariable <= 1000; counterVariable++){
+	for (int counterVariable = 00; counterVariable <= 1000; ++counterVariable){
 
 		//float型で0.001ずつインクリメント
 		cout << floatSum << "    ";
