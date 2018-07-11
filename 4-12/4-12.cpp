@@ -29,12 +29,12 @@ int main()
 		cin >> userChoice;
 
 		//値が列挙子内のマークを指すまで繰り返し
-		} while (userChoice < diamondMark || userChoice > invalidMark);
+	} while (userChoice < diamondMark || userChoice > invalidMark);
 
 	//選んだ列挙子が4 = 『invalidMark』でないとき
 	if (userChoice != invalidMark){
 
-	    // trumpMark型変数に選んだ値ををキャスト
+		// trumpMark型変数に選んだ値をキャスト
 		trumpMark userSymbol = static_cast<trumpMark>(userChoice);
 
 		//選んだマーク毎に表示文を変更
