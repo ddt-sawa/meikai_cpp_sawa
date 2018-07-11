@@ -26,34 +26,38 @@ int main()
 	cin >> integerNumber;
 
 	//合計値
-    double entireSum = 0;
+	int entireSum = 0;
 
-    //平均値
-    double entireAverage = 0;
+	//平均値
+	double entireAverage = 0;
 
-    //整数を規定回数入力し、その合計と平均値を計算するループ文
-    for (int firstCounter = 1; firstCounter <= integerNumber; firstCounter++){
+	//整数を規定回数入力し、その合計と平均値を計算するループ文
+	for (int firstCounter = 1; firstCounter <= integerNumber; ++firstCounter){
 
-    	//加算する整数値
-    	int integerValue;
+		//加算する整数値
+		int integerValue;
 
-    	//整数値の入力を促す
-    	cout << "整数 (0で終了) : ";
+		//整数値の入力を促す
+		cout << "整数 (0で終了) : ";
 
-    	//整数入力
-    	cin >> integerValue;
+		//整数入力
+		cin >> integerValue;
 
-    	//0が入力された場合終了
-    	if (integerValue == 0) {break;}
+		//0が入力された場合
+		if (integerValue == 0) {
 
-    	//合計に入力値を加算
-    	entireSum += integerValue;
+			//整数入力終了
+			break;
+		}
 
-    	//平均を計算
-    	entireAverage = entireSum / firstCounter;
-    }
-    //合計を表示
-    cout << "合計は" << entireSum << "です。\n";
-    //平均を表示
-    cout << "平均は" << entireAverage << "です。\n";
+		//合計に入力値を加算
+		entireSum += integerValue;
+
+		//平均を計算
+		entireAverage = static_cast<double>(entireSum) / firstCounter;
+	}
+	//合計を表示
+	cout << "合計は" << entireSum << "です。\n";
+	//平均を表示
+	cout << "平均は" << entireAverage << "です。\n";
 }
