@@ -24,25 +24,25 @@ using namespace std;
 int signOf(int integerValue)
 {
 	//受け取った引数が負の場合
-    if (integerValue < 0) {
+	if (integerValue < 0) {
 
-    	//-1を返却
-    	return -1;
-    }
+		//-1を返却
+		return -1;
+	}
 
-    //受け取った引数が0の場合
-    else if (integerValue  == 0) {
+	//受け取った引数が0の場合
+	else if (integerValue  == 0) {
 
-    	//0を返却
-    	return 0;
-    }
+		//0を返却
+		return 0;
+	}
 
-    //受け取った引数が正の場合
-    else {
+	//受け取った引数が正の場合
+	else {
 
-    	//1を返却
-    	return 1;
-    }
+		//1を返却
+		return 1;
+	}
 
 }
 
