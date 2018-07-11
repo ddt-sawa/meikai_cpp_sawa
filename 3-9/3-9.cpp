@@ -29,7 +29,7 @@ int main()
 	}while (downNumber <= 0);
 
 	//値を0になるまで一つずつ減らしていく
-	for (int counterValiable = 0; counterValiable <= downNumber; counterValiable++) {
-		cout << (downNumber - counterValiable) << '\n';
+	for (int firstCounter = 0; firstCounter <= downNumber; ++firstCounter) {
+		cout << (downNumber - firstCounter) << '\n';
 	}
 }
