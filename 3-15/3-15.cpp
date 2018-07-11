@@ -28,14 +28,14 @@ int main(){
 	int divisorNumber = 0;
 
 	//約数を探し、その数を記録するループ文
-	for (int counterVariable = 1; counterVariable <= integerValue; counterVariable++){
+	for (int counterVariable = 1; counterVariable <= integerValue; ++counterVariable){
 
 		// 整数を割り切れる値（約数）が見つかった場合
 		if ((integerValue % counterVariable) == 0){
 			//その約数を表示して改行
 			cout << counterVariable << '\n';
 			//約数が見つかるたび、約数の総数をインクリメント
-			divisorNumber++;
+			++divisorNumber;
 		}
 	}
 	//約数の総数を表示
