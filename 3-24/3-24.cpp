@@ -25,13 +25,13 @@ int main()
 	cin >> integerNumber;
 
 	//合計値
-	double entireSum = 0;
+	int entireSum = 0;
 
 	//平均値
 	double entireAverage = 0;
 
 	////正の整数を規定回数入力し、その合計と平均値を計算するループ文
-	for (int firstCounter = 1; firstCounter <= integerNumber; firstCounter++){
+	for (int firstCounter = 1; firstCounter <= integerNumber; ++firstCounter){
 
 		//加算したい正の整数
 		int positiveInteger;
@@ -49,9 +49,9 @@ int main()
 			cout << "負及び0は加算しません。\n";
 
 			//入力回数を1つ戻す
-			firstCounter--;
+			--firstCounter;
 
-			//次の行の合計値計算を飛ばす
+			//合計値・平均値計算を飛ばす
 			continue;
 		}
 
@@ -59,13 +59,13 @@ int main()
 		entireSum += positiveInteger;
 
 		//平均を計算
-		entireAverage = entireSum / firstCounter;
+		entireAverage = static_cast<double>(entireSum) / firstCounter;
 
 	}
 
 	//合計を表示
-    cout << "合計は" << entireSum << "です。\n";
+	cout << "合計は" << entireSum << "です。\n";
 
-    //平均を表示
-    cout << "平均は" << entireAverage << "です。\n";
+	//平均を表示
+	cout << "平均は" << entireAverage << "です。\n";
 }
