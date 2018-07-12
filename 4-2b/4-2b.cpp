@@ -5,10 +5,8 @@
  b.unsigned型の最小値から最大値までの全整数値を8進数、10進数、16進数で表示。
  */
 
-/*演習4-2以下のプログラムを作成せよ。
- a.int型の最小値から最大値までの全整数値を8進数、10進数、16進数で表示。
- */
 
+#include<climits>
 #include<iostream>
 
 using namespace std;
@@ -16,14 +14,14 @@ using namespace std;
 int main()
 {
 	//unsigned int型の最小値から最大値まで表示
-	for (unsigned CounterVariable = 0; ; ++CounterVariable){
+	for (unsigned counterVariable = 0; counterVariable <= UINT_MAX; ++counterVariable){
 
 		//8進数で表示
-		cout << oct << CounterVariable << '\n';
+		cout << oct << counterVariable << '\n';
 		//10進数で表示
-		cout << dec << CounterVariable << '\n';
+		cout << dec << counterVariable << '\n';
 		//16進数で表示
-		cout << hex << CounterVariable << '\n';
+		cout << hex << counterVariable << '\n';
 	}
 
 }
