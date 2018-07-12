@@ -18,7 +18,7 @@ using namespace std;
 int main()
 {
 	//int型の最小値から最大値まで表示
-	for (int counterVariable = INT_MIN; ; ++counterVariable){
+	for (int counterVariable = INT_MIN; counterVariable <= INT_MAX; ++counterVariable){
 
 		//8進数で表示
 		cout << oct << counterVariable << '\n';
