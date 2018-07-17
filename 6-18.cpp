@@ -15,12 +15,12 @@
 
 using namespace std;
 
-//関数名         : returnRandomNumber
-//仕様           : 1-9の乱数を返却する。複数回呼び出された場合、乱数の値を連続させない
-//引数           : なし
-//返り値         : int型変数randomNumber(1-9の乱数)
-//作成者         : sawa
-//日付           : 7/11
+/**
+*1-9の乱数を返却する。複数回呼び出された場合、乱数の値を連続させない
+* @return randomNumber 乱数
+* @author Sawa
+* @since 7.17
+*/
 int returnRandomNumber()
 {
     //関数を呼び出した回数
