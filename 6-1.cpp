@@ -15,12 +15,13 @@
 using namespace std;
 
 
-//関数名         : signOf
-//仕様           : 受け取った値が負なら-1、0なら0、正なら1を返却
-//引数           : int型変数
-//返り値         : int型定数(-1,0,1)
-//作成者         : sawa
-//日付           : 7/10
+/**
+*受け取った引数が負なら-1、0なら0、正なら1を返却する
+* @param integerValue 整数
+* @return int型整数　-1,0,1
+* @author Sawa
+* @since 7.17
+*/
 int signOf(int integerValue)
 {
 	//受け取った引数が負の場合
