@@ -17,12 +17,13 @@
 
 using namespace std;
 
-//関数名         : returnRandom
-//仕様           : 第一引数以上、第二引数未満の乱数を返却する
-//引数           : int型変数firstArgument(第一引数)、secondArgument(第二引数)
-//返り値         : int型変数randomNumber(第一引数以上、第二引数未満の乱数)
-//作成者         : sawa
-//日付           : 7/11
+/**
+*第一引数以上、第二引数未満の乱数を返却する
+* @param firstArgument 第一引数, secondArgument 第二引数
+* @return randomNumber 乱数
+* @author Sawa
+* @since 7.17
+*/
 int returnRandom(int firstArgument, int secondArgument)
 {
 
@@ -55,7 +56,7 @@ int main()
 {
 
 	//表示する値の概要を告知
-	cout << "a以上b未満の乱数を表示します。a >= b の場合aの値を返します。";
+	cout << "a以上b未満の乱数を表示します。a >= b の場合aの値を返します。\n";
 
 	//第一引数を宣言
 	int firstArgument;
