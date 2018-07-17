@@ -14,24 +14,26 @@
 
 using namespace std;
 
-//関数名         : returnSquare（インライン関数）
-//仕様           : 引数の2乗値を返却する
-//引数           : double型変数doubleValue
-//返り値         : double型変数doubleValueの2乗値
-//作成者         : sawa
-//日付           : 7/11
+/**
+*引数の2乗値を返却する
+* @param doubleValue 引数
+* @return double型の値　引数の2乗値
+* @author Sawa
+* @since 7.17
+*/
 inline double returnSquare(double doubleValue)
 {
     //引数の2乗値を返す
 	return doubleValue * doubleValue;
 }
 
-//関数名         : returnCube（インライン関数）
-//仕様           : 引数の3乗値を返却する
-//引数           : double型変数doubleValue
-//返り値         : double型変数doubleValueの3乗値
-//作成者         : sawa
-//日付           : 7/11
+/**
+*引数の3乗値を返却する
+* @param doubleValue 引数
+* @return double型の値　引数の3乗値
+* @author Sawa
+* @since 7.17
+*/
 inline double returnCube(double doubleValue)
 {
 	//引数の3乗値を返す
