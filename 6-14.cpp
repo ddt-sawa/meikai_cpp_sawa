@@ -13,12 +13,13 @@
 using namespace std;
 
 
-//関数名         : sortInteger
-//仕様           : 受け取った2整数を昇順に並び替える
-//引数           : int型変数firstInteger、secondInteger
-//返り値         : なし
-//作成者         : sawa
-//日付           : 7/11
+
+/**
+*受け取った2整数を昇順に並び替える
+* @param firstInteger,secondInteger 整数
+* @author Sawa
+* @since 7.17
+*/
 void sortInteger(int& firstInteger, int& secondInteger)
 {
 
