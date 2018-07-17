@@ -17,12 +17,12 @@
 
 using namespace std;
 
-//関数名         : printInt
-//仕様           : 正の整数値を入力させ、返却する
-//引数           : なし
-//返り値         : int型変数positiveInteger(正の整数値)
-//作成者         : sawa
-//日付           : 7/11
+/**
+*関数内で入力した正の整数値を返却する
+* @return positiveInteger　正の整数値
+* @author Sawa
+* @since 7.17
+*/
 int printInt()
 {
     //返却する正の整数値を宣言
