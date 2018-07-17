@@ -13,19 +13,21 @@
 
 using namespace std;
 
-//関数名         : returnSum
-//仕様           : 第二引数以上第一引数以下の全整数の総和を返却する、第二引数の値が指定されなかった場合、第二引数は1とする
-//引数           : int型変数firstArgument(第一引数)、secondArgument(第二引数)
-//返り値         : 総和(entireSum)
-//作成者         : sawa
-//日付           : 7/11
+
+/**
+*第二引数以上第一引数以下の全整数の総和を返却する、第二引数の値が指定されなかった場合、第二引数は1とする
+* @param firstArgument 第一引数、secondArgument 第二引数
+* @return entireSum 総和
+* @author Sawa
+* @since 7.17
+*/
 int returnSum(int firstArgument,int secondArgument = 1)
 {
 	//第二引数以上第一引数以下の全整数の総和を0で初期化
     int entireSum = 0;
 
     //総和を計算するループ
-    for (int counterVariable = secondArgument; counterVariable < firstArgument;  ++counterVariable) {
+    for (int counterVariable = secondArgument; counterVariable <= firstArgument;  ++counterVariable) {
 
     	//総和に整数値を代入
     	entireSum += counterVariable;
