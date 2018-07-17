@@ -1,4 +1,4 @@
-/*
+﻿/*
  * 7-7.cpp
  *
  *  Created on: 2018/06/25
@@ -24,7 +24,7 @@ using namespace std;
 void removeArray(int intArray[], int arraySize, int deleteIndex)
 {
 	//配列の要素を削除するためのループ
-	for (int firstCounter = deleteIndex; firstCounter < (arraySize - 1); ++firstCounter) {
+	for (int firstCounter = deleteIndex; firstCounter < arraySize; ++firstCounter) {
 
 		//消去される要素以降にある要素は一つずつ配列をズラす
 		intArray[firstCounter] = intArray[firstCounter + 1];
