@@ -15,24 +15,27 @@
 
 using namespace std;
 
-//関数名         : returnMinimumValue
-//仕様           : 引数の最小値を返却する関数
-//引数           : int型変数firstInteger,secondInteger
-//返り値         : 2引数の最小値
-//作成者         : sawa
-//日付           : 7/11
+/**
+*2つの引数の最小値を返却する
+* @param firstInteger, secondInteger 整数
+* @return int型の値　2つの引数の最小値
+* @author Sawa
+* @since 7.17
+*/
+
 int returnMinimumValue(int firstInteger, int secondInteger)
 {
 	//2引数のうち、小さい方の値を返却
 	return firstInteger < secondInteger ? firstInteger : secondInteger;
 }
 
-//関数名         : returnMinimumValue
-//仕様           : 引数の最小値を返却する関数
-//引数           : int型変数firstInteger,secondInteger,thirdInteger
-//返り値         : int型変数minimumValue(3引数の最小値)
-//作成者         : sawa
-//日付           : 7/11
+/**
+*3つの引数の最小値を返却する
+* @param firstInteger, secondInteger, thirdInteger 整数
+* @return minimumValue　最小値
+* @author Sawa
+* @since 7.17
+*/
 int returnMinimumValue(int firstInteger, int secondInteger, int thirdInteger)
 {
 	//最小値を仮に第一引数の値とする
