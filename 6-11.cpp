@@ -10,12 +10,12 @@
 
 using namespace std;
 
-//関数名         : confirmRetry
-//仕様           : 課題の続行を確認する
-//引数           : なし
-//返り値         : bool型変数userRetry("True"or"False")
-//作成者         : sawa
-//日付           : 7/11
+/**
+*関数内で入力された値によって課題続行を判断する
+* @return bool型の値
+* @author Sawa
+* @since 7.17
+*/
 bool confirmRetry()
 {
 	//課題続行を判断するint型変数を宣言
