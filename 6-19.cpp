@@ -17,12 +17,13 @@ using namespace std;
 //配列の要素数
 const int arraySize = 5;
 
-//関数名         : returnArray
-//仕様           : 配列の要素への参照を返却する関数
-//引数           : int型変数arrayIndex(配列の添え字)
-//返り値         : int型変数intArray[arrayIndex]への参照
-//作成者         : sawa
-//日付           : 7/11
+/**
+*引数として受け取った配列の要素への参照を返却する
+* @param arrayIndex 配列の要素
+* @return intArray[arrayIndex] 配列の要素への参照, (safetyValue 添え字が不正だった場合)
+* @author Sawa
+* @since 7.17
+*/
 int& returnArray(int arrayIndex)
 {
 	//不正な添え字を受け取った場合に返却する数値
@@ -38,7 +39,7 @@ int& returnArray(int arrayIndex)
 	//配列の宣言
 	static int intArray[arraySize];
 
-	//添え字によって指定された配列の要素を返却
+	//添え字によって指定された配列の要素への参照を返却
 	return intArray[arrayIndex];
 }
 
