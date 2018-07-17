@@ -15,12 +15,13 @@
 using namespace std;
 
 
-//関数名         : returnCircleArea
-//仕様           : 円の面積を計算する
-//引数           : double型変数circularConstant(半径)
-//返り値         : double型変数circleArea(面積)
-//作成者         : sawa
-//日付           : 7/11
+/**
+*円の面積を返却する
+* @param circleRadius 半径
+* @return circleArea　面積
+* @author Sawa
+* @since 7.17
+*/
 double returnCircleArea(double circleRadius)
 {
 
