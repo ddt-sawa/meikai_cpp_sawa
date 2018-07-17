@@ -14,12 +14,13 @@ int min(int a, int b, int c){************}
 using namespace std;
 
 
-//関数名         : returnMinimum
-//仕様           : 受け取った3整数の最小値を返却する
-//引数           : 3つのint型変数
-//返り値         : int型変数minimumValue(最小値)
-//作成者         : sawa
-//日付           : 7/11
+/**
+*受け取った3整数の最小値を返却する
+* @param firstInteger secondInteger thirdInteger 整数 
+* @return minimumValue　最小値
+* @author Sawa
+* @since 7.17
+*/
 int returnMinimum(int firstInteger, int secondInteger, int thirdInteger)
 {
 	//返却すべき最小値を、最初の引数に仮設定
