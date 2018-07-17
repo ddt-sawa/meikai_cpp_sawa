@@ -14,17 +14,16 @@
 
 using namespace std;
 
-//関数名         : printSeason
-//仕様           : 引数として受け取った月の季節を表示する
-//引数           : int型変数argumentMonth(月)
-//返り値         : なし
-//作成者         : sawa
-//日付           : 7/11
+/**
+*引数として受け取った月に応じた季節を表示する
+* @param thisMonth 月
+* @author Sawa
+* @since 7.17
+*/
 void printSeason(int thisMonth)
 {
-	//仮引数を利用したswitch文の作成
+	//引数を利用したswitch文の作成
 	switch (thisMonth){
-
 
 	//(12)1,2月の場合"冬"と表示
 	case 1 :
