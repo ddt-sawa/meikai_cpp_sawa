@@ -13,12 +13,13 @@
 
 using namespace std;
 
-//関数名         : returnSum
-//仕様           : カウントアップした整数値の総和を返却する
-//引数           : int型変数integerNumber(カウントアップの上限)
-//返り値         : int型変数arithmeticSum(カウントアップの総和)
-//作成者         : sawa
-//日付           : 7/11
+/**
+*1から引数までの全整数の総和を求めて返却する
+* @param integerNumber 整数
+* @return arithmeticSum　総和
+* @author Sawa
+* @since 7.17
+*/
 int returnSum(int integerNumber)
 {
 	//カウントアップの総和を0で初期化
@@ -40,7 +41,7 @@ int main()
 	int integerNumber;
 
 	//カウントアップの総和を返却することを告知
-	cout << "1からnまでの全整数の和を求めます。";
+	cout << "1からnまでの全整数の和を求めます。\n";
 
 	//上限値入力を促す
 	cout << "整数n : ";
