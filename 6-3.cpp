@@ -13,12 +13,13 @@
 
 using namespace std;
 
-//関数名         : returnMedian
-//仕様           : 受け取った3整数の中央値を返却する
-//引数           : 3つのint型変数
-//返り値         : int型変数medianInteger(中央値)
-//作成者         : sawa
-//日付           : 7/11
+/**
+*受け取った3整数の中央値を返却する
+* @param firstInteger secondInteger thirdInteger 整数
+* @return medianInteger　中央値
+* @author Sawa
+* @since 7.17
+*/
 int returnMedian(int firstInteger, int secondInteger, int thirdInteger)
 {
 	//返却値である中央値を仮に第一引数に設定
