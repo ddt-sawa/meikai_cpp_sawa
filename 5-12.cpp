@@ -14,7 +14,7 @@ using namespace std;
 int main()
 {
     //3次元配列の宣言
-	int intArray[5][6][4];
+	int intArray[5][6][4] = { 0 };
 
 	//要素数を表示
 	cout << "配列a[5][6][4]の要素数は" << sizeof(intArray) / sizeof(intArray[5]) << "です。\n";
