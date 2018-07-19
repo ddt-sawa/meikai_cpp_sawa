@@ -1,5 +1,7 @@
 /*演習5-8 配列の要素の並びをシャッフルする（要素の並びがランダムになるようかき混ぜる）
- * プログラムを作成せよ。*/
+ プログラムを作成せよ。*/
+
+
 
 #include<ctime>
 #include<cstdlib>
@@ -13,75 +15,47 @@ int main()
 	const int arrayNumber = 6;
 
 	//シャッフルしたい配列の要素を初期化
-	int intArray[arrayNumber] = {0, 1, 2, 3, 4, 5};
+	int intArray[arrayNumber] = { 0, 1, 2, 3, 4, 5 };
 
-	//配列の要素をシャッフル表示することを告知
-	cout << "元々の配列は{0, 1, 2, 3, 4, 5}です。\n" << "シャッフルしました。\n";
+	//表示する値の説明
+	cout << "元々の配列の要素は、{";
 
-	//配列の要素をランダムに並び替えるための配列(0-5で被りがない乱数を要素に持つ)を宣言
-	int randomArray[arrayNumber];
+	//配列の要素を表示するループ
+	for (int firstCounter = 0; firstCounter < arrayNumber; ++firstCounter) {
+
+		//要素を表示
+		cout << intArray[firstCounter] << ' ';
+	}
+
+	//語尾
+	cout << "}です。\n";
 
 	//乱数テーブルを用意
 	srand(time(NULL));
 
-	//randomArray配列に値を走査代入するループ文
-	for (int firstCounter = 0; firstCounter < arrayNumber; ++firstCounter){
+	//配列内要素をシャッフルするためのループ
+	for (int firstCounter = 0; firstCounter < arrayNumber; ++firstCounter) {
 
-		//前の要素と被っていないことを確かめるint型変数を初期化
-		int checkCounter = 0;
 
-		//randomArray配列に入れる値が被らないようにするループ文
-		do{
+		//現在走査中の要素と入れ替える要素の添字をランダムに決める
+		int randomNumber = rand() % arrayNumber;
 
-			//randomArray配列の要素に0-5までの乱数を代入
-			randomArray[firstCounter] = rand() % 6;
+		//走査中要素の値を一時保存
+		int temporaryValue = intArray[firstCounter];
 
-			//randomArray[0]の場合
-			if (firstCounter == 0){
+		//走査中要素と、ランダムに決められた要素の値を入れ替える
+		intArray[firstCounter] = intArray[randomNumber];
 
-				//前の数値を参照しないのでループを抜け、次の要素に進む
-				break;
-			}
-
-			//現在代入中の要素より前の要素のをチェックするループ文
-			for (int secondCounter = 0; secondCounter < firstCounter; ++secondCounter){
-
-				//同じ値を発見した場合
-				if (randomArray[firstCounter] == randomArray[secondCounter]){
-
-					//チェックカウンタを0に戻す
-					checkCounter = 0;
-
-					//乱数代入を再試行
-					continue;
-				}
-
-				//同じ値ではない場合
-				else {
-
-					//チェックカウンタを1にする
-					checkCounter = 1;
-				}
-			}
-
-			//全走査を終了したうえでチェックカウンタが 1(以前の要素が全て違う値)であればwhileループを抜け、次の要素に進む
-		}while (checkCounter == 0);
+		//ランダムに決められた要素の値に、一時保存していた走査中要素の値を代入する
+		intArray[randomNumber] = temporaryValue;
 	}
 
 
-	//randomArray配列を用いて、配列の要素をシャッフルするループ文
-	for (int firstCounter = 0; firstCounter < arrayNumber; ++firstCounter){
-
-		//ランダムな添え字(randomArrayの値)の要素を、配列の先頭から順番に代入していく
-		int temporaryValue = intArray[firstCounter];                  //移動先の要素を一時保存
-		intArray[firstCounter] = intArray[randomArray[firstCounter]]; //ランダムな添え字の要素に書き換える
-		intArray[randomArray[firstCounter]] = temporaryValue;         //ランダムな添え字の要素を移動先の要素で書き換える
-	}
 
 	//シャッフルした配列を走査表示するループ文
-	for (int secondCounter = 0; secondCounter < arrayNumber; ++secondCounter) {
+	for (int firstCounter = 0; firstCounter < arrayNumber; ++firstCounter) {
 
 		//配列を走査表示
-		cout << "intArray[" << secondCounter << "] = " << intArray[secondCounter] << "です。\n";
+		cout << "intArray[" << firstCounter << "] = " << intArray[firstCounter] << "です。\n";
 	}
 }
