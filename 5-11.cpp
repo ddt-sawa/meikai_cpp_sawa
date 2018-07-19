@@ -16,7 +16,7 @@ using namespace std;
 int main()
 {
 	//点数配列[人数][教科数]の宣言
-	int scoreArray[6][2];
+	int scoreArray[6][2] = { 0 };
 
 	//6人分の点数入力をさせるループ文
 	for (int firstCounter = 0; firstCounter < 6; ++firstCounter){
