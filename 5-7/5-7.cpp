@@ -21,7 +21,7 @@ int main()
 	const int arrayNumber = 15;
 
 	//配列宣言
-	int intArray[arrayNumber];
+	int intArray[arrayNumber] = {0};
 
 	//乱数テーブルの準備
 	srand(time(NULL));
@@ -33,7 +33,7 @@ int main()
 		intArray[firstCounter] = rand() % 11;
 	}
 
-	//配列の値が1-10以上かどうかを調べるループ分
+	//配列の値が走査中の数字以上かどうかを調べるループ分
 	for (int firstCounter = 10; firstCounter > 0; --firstCounter) {
 
 		//配列の要素を走査するループ文
