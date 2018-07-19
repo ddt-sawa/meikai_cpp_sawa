@@ -24,7 +24,7 @@ int main()
 	const int arrayNumber = 15;
 
 	//配列宣言
-	int intArray[arrayNumber];
+	int intArray[arrayNumber] = {0};
 
 	//乱数テーブルの準備
 	srand(time(NULL));
