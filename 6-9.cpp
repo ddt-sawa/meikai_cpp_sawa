@@ -18,36 +18,36 @@
 using namespace std;
 
 /**
-*第一引数以上、第二引数未満の乱数を返却する
-* @param firstArgument 第一引数, secondArgument 第二引数
+*下限値以上、上限値未満の乱数を返却する
+* @param lowerLimit 下限値, upperLimit 上限値
 * @return randomNumber 乱数
 * @author Sawa
 * @since 7.17
 */
-int returnRandom(int firstArgument, int secondArgument)
+int returnRandom(int lowerLimit, int upperLimit)
 {
 
-	//第一引数が第二引数以上の場合
-	if (firstArgument >= secondArgument) {
+	//下限値が上限値以上の場合
+	if (lowerLimit >= upperLimit) {
 
-		//第一引数の値を返却
-		return firstArgument;
+		//下限値を返却
+		return lowerLimit;
 	}
 
 	//乱数テーブルを準備
 	srand(time(NULL));
 
-	//最初にfor文の条件を満たすため、返却値を第一引数より小さい値で初期化しておく
-	int randomNumber = firstArgument - 1;
+	//最初にfor文の条件を満たすため、返却値を下限値より小さい値で初期化しておく
+	int randomNumber = lowerLimit - 1;
 
-	//第一引数以上第二引数未満の乱数を生成するまでループ
-	for (; (randomNumber < firstArgument || randomNumber > secondArgument);) {
+	//下限値以上上限値未満の乱数を生成するまでループ
+	for (; (randomNumber < lowerLimit || randomNumber >= upperLimit);) {
 
 		//返却値に乱数を代入
 		randomNumber = rand();
 	}
 
-	//第一引数以上第二引数未満の乱数を返却
+	//下限値以上上限値未満の乱数を返却
 	return randomNumber;
 }
 
@@ -58,25 +58,25 @@ int main()
 	//表示する値の概要を告知
 	cout << "a以上b未満の乱数を表示します。a >= b の場合aの値を返します。\n";
 
-	//第一引数を宣言
-	int firstArgument;
+	//下限値を宣言
+	int lowerLimit;
 
-	//第一引数の入力を促す
+	//下限値の入力を促す
 	cout << "a : ";
 
-	//第一引数の入力
-	cin >> firstArgument;
+	//下限値の入力
+	cin >> lowerLimit;
 
-	//第二引数を宣言
-	int secondArgument;
+	//上限値を宣言
+	int upperLimit;
 
-	//第二引数の入力を促す
+	//上限値の入力を促す
 	cout << "b : ";
 
-	//第二引数の入力
-	cin >> secondArgument;
+	//上限値の入力
+	cin >> upperLimit;
 
-	//returnRandom関数に引数を渡し、返却値となる第一引数以上第二引数未満の乱数を表示
-	cout << returnRandom(firstArgument, secondArgument) << "です。\n";
+	//returnRandom関数に引数を渡し、返却値となる下限値以上上限値未満の乱数を表示
+	cout << returnRandom(lowerLimit, upperLimit) << "です。\n";
 }
 
