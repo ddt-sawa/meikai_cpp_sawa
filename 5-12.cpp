@@ -13,12 +13,22 @@ using namespace std;
 
 int main()
 {
-    //3次元配列の宣言
-	int intArray[5][6][4] = { 0 };
+	//配列の要素数
+	const int firstArrayElement = 5;
+	
+	//要素の要素数
+	const int secondArrayElement = 6;
 
-	//要素数を表示
-	cout << "配列a[5][6][4]の要素数は" << sizeof(intArray) / sizeof(intArray[5]) << "です。\n";
+	//要素の要素の要素数
+	const int thirdArrayElement = 4;
+
+    //3次元配列aを初期化
+	int intArray[firstArrayElement][secondArrayElement][thirdArrayElement] = { 0 };
+
+	//要素数を表示(5)
+	cout << "配列a[5][6][4]の要素数は" << sizeof(intArray) / sizeof(intArray[firstArrayElement]) << "です。\n";
 }
+
 
 
 
