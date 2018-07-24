@@ -37,6 +37,56 @@ bool confirmRetry()
 	return static_cast<bool>(userRetry);
 }
 
+void printQuestion(int questionNumber, int firstNumber, int secondNumber, int thirdNumber)
+{
+	switch (questionNumber) {
+	case 0:
+		cout << firstNumber << " + " << secondNumber << " + " << thirdNumber << " = ";
+		break;
+	case 1:
+		cout << firstNumber << " + " << secondNumber << " - " << thirdNumber << " = ";
+		break;
+	case 2:
+		cout << firstNumber << " - " << secondNumber << " + " << thirdNumber << " = ";
+		break;
+	case 3:
+		cout << firstNumber << " - " << secondNumber << " - " << thirdNumber << " = ";
+		break;
+	default:
+		break;
+	}
+}
+
+bool judgeAnswer(int questionNumber, int firstNumber, int secondNumber, int thirdNumber, int userAnswer)
+{
+	switch (questionNumber) {
+	case 0: 
+		if (userAnswer == firstNumber + secondNumber + thirdNumber) {
+			return true;
+		}
+		break;
+	case 1:
+		if (userAnswer == firstNumber + secondNumber - thirdNumber) {
+			return true;
+		}
+		break;
+	case 2:
+		if (userAnswer == firstNumber - secondNumber + thirdNumber) {
+			return true;
+		}
+		break;
+	case 3:
+		if (userAnswer == firstNumber - secondNumber - thirdNumber) {
+			return true;
+		}
+		break;
+	default:
+		break;
+	}
+	return false;
+}
+
+
 int main()
 {
 
@@ -50,117 +100,22 @@ int main()
 		int thirdNumber = rand() % 900 + 100;   //整数z
 		int questionType = rand() % 4;
 
-		//questionTypeの数値により、4通りの問題分岐
-		switch (questionType) {
-
-		//questionType == 0 の場合、出題は (x + y + z)
-		case 0 : {
+		
 
 			//正解がでるまでループ
 			while (true){
 
+				//問題文表示
+				printQuestion(questionType, firstNumber, secondNumber, thirdNumber);
+
 				//回答の宣言
 				int userAnswer;
-
-				//回答入力を促す
-				cout << firstNumber << " + " << secondNumber << " + " << thirdNumber << " = ";
 
 				//回答入力
 				cin >> userAnswer;
 
 				//回答が正解だった場合
-				if (userAnswer == firstNumber + secondNumber + thirdNumber){
-
-					//正解したことを告知
-					cout << "正解です!";
-
-					//回答ループを抜ける
-					break;
-				}
-				//回答が違った場合、再回答
-				cout << "違いますよ。\n";
-			}
-			//switch文による問題分岐を抜け、課題続行確認フェイズに移動
-		}break;
-
-
-		//questionType == 1 の場合、出題は (x + y - z)
-		case 1 : {
-
-			//正解がでるまでループ
-			while (true){
-
-				//回答の宣言
-				int userAnswer;
-
-				//回答入力を促す
-				cout << firstNumber << " + " << secondNumber << " - " << thirdNumber << " = ";
-
-				//回答入力
-				cin >> userAnswer;
-
-				//回答が正解だった場合
-				if (userAnswer == firstNumber + secondNumber - thirdNumber){
-
-					//正解したことを告知
-					cout << "正解です!";
-
-					//回答ループを抜ける
-					break;
-				}
-				//回答が違った場合、再回答
-				cout << "違いますよ。\n";
-			}
-			//switch文による問題分岐を抜け、課題続行確認フェイズに移動
-		}break;
-
-		//questionType == 2 の場合、出題は (x - y + z)
-		case 2 : {
-
-			//正解がでるまでループ
-			while (true){
-
-				//回答の宣言
-				int userAnswer;
-
-				//回答入力を促す
-				cout << firstNumber << " - " << secondNumber << " + " << thirdNumber << " = ";
-
-				//回答入力
-				cin >> userAnswer;
-
-				//回答が正解だった場合
-				if (userAnswer == firstNumber - secondNumber + thirdNumber){
-
-					//正解したことを告知
-					cout << "正解です!";
-
-					//回答ループを抜ける
-					break;
-				}
-				//回答が違った場合、再回答
-				cout << "違いますよ。\n";
-			}
-			//switch文による問題分岐を抜け、課題続行確認フェイズに移動
-		}break;
-
-		//questionType == 3 の場合、出題は (x - y - z)
-		case 3 : {
-
-			//正解がでるまでループ
-			while (true){
-
-				//回答の宣言
-				int userAnswer;
-
-				//回答入力を促す
-				cout << firstNumber << " - " << secondNumber << " - " << thirdNumber << " = ";
-
-				//回答入力
-				cin >> userAnswer;
-
-				//回答が正解だった場合
-				if (userAnswer == firstNumber - secondNumber - thirdNumber){
+				if (judgeAnswer(questionType, firstNumber, secondNumber, thirdNumber, userAnswer) == true) {
 
 					//正解したことを告知
 					cout << "正解です!";
@@ -173,9 +128,6 @@ int main()
 				cout << "違いますよ。\n";
 
 			}
-			//switch文による問題分岐を抜け、課題続行確認フェイズに移動
-		}break;
-		}
 
 		//confirm関数を呼び出し、返却値がTrueならば再試行
 	}while(confirmRetry());
