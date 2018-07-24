@@ -14,17 +14,23 @@ using namespace std;
 
 int main()
 {
-	//2次元配列[2][3]を初期化
-	int intArray[2][3] = {
+	//2次元配列の行数
+	const int arrayLine = 2;
+	
+	//2次元配列の列数
+	const int arrayRow = 3;
+
+	//2次元配列を初期化
+	int intArray[arrayLine][arrayRow] = {
 			{2, 5, 6},
 			{5, 5, 6},
 	};
 
 	//初期化した配列を走査表示するループ
-	for (int firstCounter = 0; firstCounter < 2; ++firstCounter){
+	for (int firstCounter = 0; firstCounter < arrayLine; ++firstCounter){
 
 		//列を指定
-		for(int secondCounter = 0; secondCounter < 3; ++secondCounter) {
+		for(int secondCounter = 0; secondCounter < arrayRow; ++secondCounter) {
 
 			//要素ごとに表示
 			cout << "a[" << firstCounter << "][" << secondCounter << "] = " << intArray[firstCounter][secondCounter] << "  ";
