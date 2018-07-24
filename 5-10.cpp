@@ -17,23 +17,29 @@ using namespace std;
 
 int main()
 {
+	//配列aの行数
+	const int firstArrayLine = 4;
+
+	//配列aの列数
+	const int firstArrayRow = 3;
+
 	//4行3列の配列a
-	int firstArray[4][3];
+	int firstArray[firstArrayLine][firstArrayRow];
 
 	//3行4列の配列b
-	int secondArray[3][4];
+	int secondArray[firstArrayRow][firstArrayLine];
 
 	//積を格納する配列c
-	int answerArray[4][4] = {0};
+	int answerArray[firstArrayLine][firstArrayLine] = {0};
 
 	//配列aの要素入力を促す
 	cout << "4行3列の配列を入力してください。\n";
 
 	//配列aに要素を入力するループ文
-	for(int firstCounter = 0; firstCounter < 4; ++firstCounter){
+	for(int firstCounter = 0; firstCounter < firstArrayLine; ++firstCounter){
 
 		//列ごとの要素を入力するループ文
-		for(int secondCounter = 0; secondCounter < 3; ++secondCounter) {
+		for(int secondCounter = 0; secondCounter < firstArrayRow; ++secondCounter) {
 
 			//値入力
 			cin >> firstArray[firstCounter][secondCounter];
@@ -44,10 +50,10 @@ int main()
 	cout << "3行4列の配列を入力してください。\n";
 
 	//配列bに要素を入力するループ文
-	for(int firstCounter = 0; firstCounter < 3; ++firstCounter){
+	for(int firstCounter = 0; firstCounter < firstArrayRow; ++firstCounter){
 
 		//列ごとの要素を入力するループ文
-		for(int secondCounter = 0; secondCounter < 4; ++secondCounter) {
+		for(int secondCounter = 0; secondCounter < firstArrayLine; ++secondCounter) {
 
 			//値入力
 			cin >> secondArray[firstCounter][secondCounter];
@@ -57,13 +63,13 @@ int main()
 	//配列の積を計算するループ文
 
 	//回答となる積の行を指定
-	for (int firstCounter = 0; firstCounter < 4; ++firstCounter){
+	for (int firstCounter = 0; firstCounter < firstArrayLine; ++firstCounter){
 
 		//回答となる積の列を指定
-		for(int secondCounter = 0; secondCounter < 4; ++secondCounter){
+		for(int secondCounter = 0; secondCounter < firstArrayLine; ++secondCounter){
 
 			//積の計算をするために、配列aの同じ行の要素、配列bの同じ行の要素を掛け合わせるループ文
-			for (int thirdCounter= 0; thirdCounter < 3; ++thirdCounter) {
+			for (int thirdCounter= 0; thirdCounter < firstArrayRow; ++thirdCounter) {
 
 				//配列aの行の要素×配列bの列の要素を順番に足していく
 				answerArray[firstCounter][secondCounter] += (firstArray[firstCounter][thirdCounter] * secondArray[thirdCounter][secondCounter]);
