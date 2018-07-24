@@ -38,13 +38,8 @@ int signOf(int integerValue)
 		return 0;
 	}
 
-	//受け取った引数が正の場合
-	else {
-
-		//1を返却
+	//受け取った引数が正の場合1を返却
 		return 1;
-	}
-
 }
 
 int main()
