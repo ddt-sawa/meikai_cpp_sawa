@@ -25,7 +25,8 @@ void printSeason(int thisMonth)
 	//引数を利用したswitch文の作成
 	switch (thisMonth){
 
-	//(12)1,2月の場合"冬"と表示
+	//12,1,2月の場合"冬"と表示
+	case 12 :
 	case 1 :
 	case 2 : {cout << "冬\n";}
 	break;
@@ -46,10 +47,6 @@ void printSeason(int thisMonth)
 	case 9 :
 	case 10:
 	case 11: {cout << "秋\n";}
-	break;
-
-	//12月の場合"冬"と表示
-	case 12: {cout << "冬\n";}
 	break;
 
 	//それ以外の場合何も表示しない
