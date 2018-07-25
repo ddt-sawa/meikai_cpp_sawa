@@ -19,7 +19,7 @@ using namespace std;
 bool confirmRetry()
 {
 	//課題続行を判断するint型変数を宣言
-	int userRetry;
+	int userRetry = 0;
 
 	//課題続行を確認するループ
 	do {
@@ -37,72 +37,100 @@ bool confirmRetry()
 	return static_cast<bool>(userRetry);
 }
 
+/**
+* 受け取った乱数によって問題文の表示内容を変更する
+* @param questionNumber 問題文の表示内容を決める乱数, firstNumber, secondNumber, thirdNumber 計算数値となる乱数
+* @return
+* @author Sawa
+* @since 7.25
+*/
 void printQuestion(int questionNumber, int firstNumber, int secondNumber, int thirdNumber)
 {
+	//問題分岐
 	switch (questionNumber) {
+		
+	//受け取った乱数が0の場合
 	case 0:
-		cout << firstNumber << " + " << secondNumber << " + " << thirdNumber << " = ";
+		cout << firstNumber << " + " << secondNumber << " + " << thirdNumber << " = "; //x + y + z を表示
 		break;
+	//1の場合
 	case 1:
-		cout << firstNumber << " + " << secondNumber << " - " << thirdNumber << " = ";
+		cout << firstNumber << " + " << secondNumber << " - " << thirdNumber << " = "; //x + y - z を表示
 		break;
+	//2の場合
 	case 2:
-		cout << firstNumber << " - " << secondNumber << " + " << thirdNumber << " = ";
+		cout << firstNumber << " - " << secondNumber << " + " << thirdNumber << " = "; //x - y + z を表示
 		break;
+	//3の場合
 	case 3:
-		cout << firstNumber << " - " << secondNumber << " - " << thirdNumber << " = ";
+		cout << firstNumber << " - " << secondNumber << " - " << thirdNumber << " = "; //x - y - z を表示
 		break;
+	//それ以外の場合何も表示しない
 	default:
 		break;
 	}
 }
 
+/**
+* 受け取った乱数によって入力値が正解がどうかを判断する
+* @param questionNumber 問題文を決める乱数, firstNumber, secondNumber, thirdNumber 計算数値となる乱数, userAnswer 入力値
+* @return
+* @author Sawa
+* @since 7.25
+*/
 bool judgeAnswer(int questionNumber, int firstNumber, int secondNumber, int thirdNumber, int userAnswer)
 {
+	//問題分岐
 	switch (questionNumber) {
-	case 0: 
+
+	//受け取った乱数が0の場合
+	case 0://回答がx + y + zなら正解
 		if (userAnswer == firstNumber + secondNumber + thirdNumber) {
 			return true;
 		}
 		break;
-	case 1:
+	//1の場合
+	case 1://回答がx + y - zなら正解
 		if (userAnswer == firstNumber + secondNumber - thirdNumber) {
 			return true;
 		}
 		break;
-	case 2:
+	//2の場合
+	case 2://回答がx - y + zなら正解
 		if (userAnswer == firstNumber - secondNumber + thirdNumber) {
 			return true;
 		}
 		break;
-	case 3:
+	//3の場合
+	case 3://回答がx - y - zなら正解
 		if (userAnswer == firstNumber - secondNumber - thirdNumber) {
 			return true;
 		}
 		break;
+	//それ以外の場合何も表示しない
 	default:
 		break;
 	}
+	//回答が間違っていた場合falseを返す
 	return false;
 }
 
 
 int main()
 {
-
+	//ゲーム開始の合図
 	cout << "暗算トレーニング開始!\n";
 
+	//乱数テーブルを用意
 	srand(time(NULL));
 	do {
 		//暗算に使う3乱数と問題分岐に使う乱数の宣言
 		int firstNumber = rand() % 900 + 100;   //整数x
 		int secondNumber = rand() % 900 + 100;  //整数y
 		int thirdNumber = rand() % 900 + 100;   //整数z
-		int questionType = rand() % 4;
+		int questionType = rand() % 4;          //4通りのランダムな問題分岐
 
-		
-
-			//正解がでるまでループ
+			//暗算の正解がでるまでループ
 			while (true){
 
 				//問題文表示
@@ -129,6 +157,6 @@ int main()
 
 			}
 
-		//confirm関数を呼び出し、返却値がTrueならば再試行
+		//ゲーム続行の意思を確認し、入力値が1ならばゲーム再開
 	}while(confirmRetry());
 }
