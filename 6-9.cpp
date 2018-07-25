@@ -8,7 +8,7 @@
 /*演習6-9 a以上b未満の乱数を生成して、その値を返却する関数randomを作成せよ。
 内部で乱数を生成する標準ライブラリであるrand関数(p.30)を呼び出すこと。
    int random(int a, int b);
-なお、bの値がa未満である場合には、aの値をそのまま返却すること。
+なお、bの値がa以下である場合には、aの値をそのまま返却すること。
 */
 
 #include<ctime>
@@ -18,17 +18,17 @@
 using namespace std;
 
 /**
-*下限値以上、上限値未満の乱数を返却する
+*下限値以上、上限値未満の乱数を返却する。上限値が下限値以下の場合、下限値を返却する
 * @param lowerLimit 下限値, upperLimit 上限値
-* @return randomNumber 乱数
+* @return randomNumber 乱数, lowerLimit 下限値
 * @author Sawa
 * @since 7.17
 */
 int returnRandom(int lowerLimit, int upperLimit)
 {
 
-	//下限値が上限値以上の場合
-	if (lowerLimit >= upperLimit) {
+	//上限値が下限値以下の場合
+	if (upperLimit <= lowerLimit) {
 
 		//下限値を返却
 		return lowerLimit;
