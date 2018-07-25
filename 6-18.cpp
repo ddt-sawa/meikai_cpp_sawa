@@ -16,7 +16,7 @@
 using namespace std;
 
 /**
-*1-9の乱数を返却する。複数回呼び出された場合、乱数の値を連続させない
+* 0-9の乱数を返却する。複数回呼び出された場合、乱数の値を連続させない
 * @return randomNumber 乱数
 * @author Sawa
 * @since 7.17
@@ -46,9 +46,13 @@ int returnRandomNumber()
 		//前回の乱数と異なる値が代入された場合、ループを抜ける
 	}while(backNumber == randomNumber);
 
-	//『前回の乱数』に今回の乱数の値を保存
+	//前回の乱数に今回の乱数の値を保存
 	 backNumber = randomNumber;
+
+	 //実行回数をインクリメント
 	 ++selfCounter;
+
+	 //乱数を返却
 	 return randomNumber;
 }
 
