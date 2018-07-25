@@ -13,16 +13,19 @@
 
 using namespace std;
 
-//関数外で宣言することで静的記憶域期間を与えた配列a
-int firstArray[5];
+//配列の容量
+const int arraySize = 5;
+
+//関数外で宣言することで静的記憶域期間を与える
+int firstArray[arraySize];
 
 int main()
 {
 	//static指定子を付ける事で静的記憶域期間を与えた配列b
-	static int secondArray[5];
+	static int secondArray[arraySize];
 
 	//配列aを走査表示するループ文
-	for(int firstCounter = 0; firstCounter < 5; ++firstCounter) {
+	for(int firstCounter = 0; firstCounter < arraySize; ++firstCounter) {
 
 		//値を表示
 		cout << firstArray[firstCounter];
@@ -33,7 +36,7 @@ int main()
 	cout << '\n';
 
 	//配列bを走査表示するループ文
-	for(int firstCounter = 0; firstCounter < 5; ++firstCounter) {
+	for(int firstCounter = 0; firstCounter < arraySize; ++firstCounter) {
 
 		//値を表示
 		cout << secondArray[firstCounter];
