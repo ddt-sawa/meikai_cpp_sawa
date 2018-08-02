@@ -15,27 +15,26 @@
 
 using namespace std;
 
+const int arraySize = 5;
+
 /**
 * 配列の要素を指定削除する
 * @param intArray[] 配列の先頭要素, arraySize 要素数, deleteindex 削除する要素の添字 deleteNumber 消去数
 * @author Sawa
 * @since 7.17
 */
-void removeArray(int intArray[], int arraySize, int deleteIndex, int deleteNumber)
+void removeArray(int intArray[], int inputArraySize, int deleteIndex, int deleteNumber)
 {
-	//配列の要素を削除するためのループ
-	for (int firstCounter = deleteIndex; firstCounter < arraySize; ++firstCounter) {
+	//削除する要素に、削除数ぶんずらした添字の要素を代入するループ
+	for (int firstCounter = deleteIndex; firstCounter < (deleteIndex + deleteNumber); ++firstCounter) {
 
-		//消去される要素以降にある要素は消去数ぶん配列をズラす
+		//値を代入
 		intArray[firstCounter] = intArray[firstCounter + deleteNumber];
 	}
 }
 
 int main()
 {
-	//配列の要素数
-	const int arraySize = 5;
-
 	//配列の宣言
 	int intArray[arraySize];
 
@@ -48,12 +47,11 @@ int main()
 		//要素入力
 		cin >> intArray[firstCounter];
 	}
-
 	//消去する要素の添え字
 	int deleteIndex;
 
-	//入力した添字の要素を消去することを告知
-	cout << "入力した添字の要素を消去し、以降の要素を前にずらします。\n";
+	//入力した添字以降の要素を消去することを告知
+	cout << "入力した添字以降の要素を消去し、以降の要素を前にずらします。\n";
 
 	//妥当な添字を入力させるためのループ
 	do {
@@ -63,9 +61,7 @@ int main()
 		//添字入力
 		cin >> deleteIndex;
 
-
-
-		//入力された添字が0より小さい場合、または最大の添え字より大きい場合再入力
+		//入力された添字が負、または最大の添え字より大きい場合再入力
 	} while (deleteIndex < 0 || deleteIndex > arraySize - 1);
 
 	//消去する個数
@@ -79,8 +75,8 @@ int main()
 		//消去数入力
 		cin >> deleteNumber;
 
-		//消去数が正の整数でない場合再入力
-	} while (deleteNumber < 0);
+		//消去数が負、または消去する添字が最大の添字以上になる場合再入力
+	} while (deleteNumber < 0 || deleteIndex + deleteNumber - 1 >= arraySize - 1);
 
 	//removeArray関数を呼び出し、指定した配列の要素を削除する
 	removeArray(intArray, arraySize, deleteIndex, deleteNumber);
