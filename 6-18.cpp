@@ -15,6 +15,12 @@
 
 using namespace std;
 
+//関数の呼び出しが初回であるかどうかを示す変数
+static int firstChecker;
+
+//前回の乱数
+static int backNumber;
+
 /**
 * 0-9の乱数を返却する。複数回呼び出された場合、乱数の値を連続させない
 * @return randomNumber 乱数
@@ -23,12 +29,6 @@ using namespace std;
 */
 int returnRandomNumber()
 {
-	//関数の呼び出しが初回であるかどうかを示す変数
-	static int firstChecker;
-
-	//前回の乱数
-	static int backNumber;
-
 	//今回の乱数を宣言
 	int randomNumber;
 
