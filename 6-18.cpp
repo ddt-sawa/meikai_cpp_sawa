@@ -15,11 +15,8 @@
 
 using namespace std;
 
-//関数の呼び出しが初回であるかどうかを示す変数
-static int firstChecker;
-
-//前回の乱数
-static int backNumber;
+//前回の乱数を、代入する乱数がとりえない値である-1で初期化
+int backNumber = -1;
 
 /**
 * 0-9の乱数を返却する。複数回呼び出された場合、乱数の値を連続させない
@@ -37,10 +34,10 @@ int returnRandomNumber()
 		//今回の乱数を設定
 		randomNumber = rand() % 10;
 
-		//初回の場合
-		if (firstChecker == 0) {
+		//backNumberの値が-1の場合
+		if (backNumber == -1) {
 
-			//参照する前回の乱数がないのでループを抜ける
+			//この関数を呼び出すのは初回であり、参照する前回の値が存在しないのでループを抜ける
 			break;
 		}
 		//前回の乱数と異なる値が代入された場合、ループを抜ける
@@ -48,9 +45,6 @@ int returnRandomNumber()
 
 	//前回の乱数に今回の乱数の値を保存
 	backNumber = randomNumber;
-
-	//次回以降関数を呼び出すときは初回でないものとする
-	firstChecker = 1;
 
 	//乱数を返却
 	return randomNumber;
@@ -67,7 +61,6 @@ int main()
 
 	//表示する乱数の個数(関数を呼び出す回数)
 	int integerNumber;
-
 
 	//個数入力を促す
 	cout << "表示する乱数の個数 : ";
