@@ -1,0 +1,90 @@
+﻿/*
+* 8-11.cpp
+*
+*  Created on: 2018/06/26
+*      Author: ddt
+*/
+
+/*演習8-11 p312で学習したstrcmp関数及びstrncmp関数と同等な関数を作成せよ。
+* b.strncmp関数の作成
+*/
+
+#include<iostream>
+
+using namespace std;
+
+//配列の容量を多めに宣言
+const int arrayCapacity = 100;
+
+/**
+* 第一引数と第二引数の文字列の大小関係を指定文字数まで比較し、第一引数の方が大きければ1を、小さければ-1を、等しければ0を返却する。
+* @param firstArray secondArray 文字列, limitNumber 指定文字数
+* @return int型の値 -1, 0, 1
+* @author Sawa
+* @since 7.23
+*/
+int compareCharacterArray(const char* firstArray, const char* secondArray, int limitNumber)
+{
+	//返却値
+	int returnInteger = 0;
+
+	//両文字列中の指定文字数までの大小関係を比較するループ
+	for (int firstCounter = 0; firstCounter < limitNumber; ++firstCounter) {
+
+		//第一引数の要素、または全体の文字数が大きかった場合
+		if (firstArray[firstCounter] > secondArray[firstCounter] || (secondArray[firstCounter] == 0 && firstArray[firstCounter] != 0)) {
+
+			//返却値に1を代入
+			returnInteger = 1;
+
+			//返却
+			return returnInteger;
+		}
+
+		//第二引数の要素、または全体の文字数が大きかった場合
+		else if (firstArray[firstCounter] < secondArray[firstCounter] || (secondArray[firstCounter] != 0 && firstArray[firstCounter] == 0)) {
+
+			//返却値に-1を代入
+			returnInteger = -1;
+
+			//返却
+			return returnInteger;
+		}
+	}
+
+	//全要素の大きさが等しかった場合0を返却
+	return returnInteger;
+}
+
+int main()
+{
+	//第一引数となる文字配列を初期化
+	char firstArray[arrayCapacity] = { 0 };
+
+	//文字列の入力を促す
+	cout << "文字列1を入力してください : ";
+
+	//文字列を入力
+	cin >> firstArray;
+
+	//第二引数となる文字配列を初期化
+	char secondArray[arrayCapacity] = { 0 };
+
+	//文字列の入力を促す
+	cout << "文字列2を入力してください : ";
+
+	//文字列を入力
+	cin >> secondArray;
+
+	//比較する文字数を初期化
+	int limitNumber = 0;
+
+	//文字数入力を促す
+	cout << "比較する文字数を入力してください。\n";
+
+	//文字数入力
+	cin >> limitNumber;
+
+	//返却された値を表示
+	cout << compareCharacterArray(firstArray, secondArray, limitNumber);
+}
