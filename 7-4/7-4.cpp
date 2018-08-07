@@ -73,3 +73,5 @@ int main()
 		cout << "c[" << firstCounter << "] = " << intArray[firstCounter] << '\n';
 	}
 }
+
+//クラッシュしないように修正
