@@ -14,32 +14,49 @@
 using namespace std;
 
 /**
-* 2実引数の値を交換する
-* @param *firstArgument, *secondArgument 実引数へのポインタ
+* 2整数の値を交換する
+* @param *firstInteger 整数a, *secondInteger 整数b 
 * @author Sawa
 * @since 7.17
 */
-void swap(int *firstArgument, int *secondArgument)
+void swapInteger(int *firstInteger, int *secondInteger)
 {
-	int temporaryInteger = *firstArgument;
-	*firstArgument = *secondArgument;
-	*secondArgument = temporaryInteger;
+	//aを保存
+	int temporaryInteger = *firstInteger;
+
+	//bをaに代入
+	*firstInteger = *secondInteger;
+
+	//保存していたaをbに代入
+	*secondInteger = temporaryInteger;
 }
 
 /**
-* 3実引数の値を昇順に並び替える
-* @param *firstInteger, *secondInteger, *thirdInteger 実引数へのポインタ
+* 3整数の値を昇順に並び替える
+* @param *firstInteger 整数a, *secondInteger 整数b, *thirdInteger 整数c
 * @author Sawa
 * @since 7.17
 */
-void sort(int* firstInteger, int* secondInteger, int* thirdInteger)
+void sortInteger(int* firstInteger, int* secondInteger, int* thirdInteger)
 {
-	//第一引数が第二引数より大きい場合、　swap関数を呼び出し値を入れ替える
-	if (*firstInteger > *secondInteger) swap(&(*firstInteger), &(*secondInteger));
-	//第二引数が第三引数より大きい場合、　swap関数を呼び出し値を入れ替える
-	if (*secondInteger > *thirdInteger) swap(&(*secondInteger), &(*thirdInteger));
-	//第一引数に残った値が第二引数に残った値より大きい場合、　swap関数を呼び出し値を入れ替える
-	if (*firstInteger > *secondInteger) swap(&(*firstInteger), &(*secondInteger));
+	//aがbより大きい場合　
+	if (*firstInteger > *secondInteger) {
+
+		//値を入れ替える
+		swapInteger(&(*firstInteger), &(*secondInteger));
+	}
+	//bがcより大きい場合　
+	if (*secondInteger > *thirdInteger) {
+
+		//値を入れ替える
+		swapInteger(&(*secondInteger), &(*thirdInteger));
+	}
+	//aに残った値がbに残った値より大きい場合　
+	if (*firstInteger > *secondInteger) {
+
+		//値を入れ替える
+		swapInteger(&(*firstInteger), &(*secondInteger));
+	}
 }
 
 int main()
@@ -66,7 +83,7 @@ int main()
 	cin >> thirdInteger;
 
 	//sort関数を呼び出し、3整数を昇順にソートする
-	sort(&firstInteger, &secondInteger, &thirdInteger);
+	sortInteger(&firstInteger, &secondInteger, &thirdInteger);
 
 	//3整数を昇順に並び替えたことを告知
 	cout << "整数a,b,cを昇順に並び替えました。\n";
@@ -79,5 +96,4 @@ int main()
 
 	//最大値を表示
 	cout << "整数cの値は" << thirdInteger << "です。\n";
-
 }
