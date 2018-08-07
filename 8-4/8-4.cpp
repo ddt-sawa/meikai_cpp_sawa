@@ -15,11 +15,15 @@ using namespace std;
 
 int main()
 {
+
+	//二次元配列の列数
+	const int arrayRow = 5;
+
 	//二次元文字配列
-	char twoDimensionArray[][5] = { "LISP", "C", "Ada" };
+	char twoDimensionArray[][arrayRow] = { "LISP", "C", "Ada" };
 
 	//2次元配列は、(全体のバイト数/要素のバイト数)で文字列数が出せる
-	for (int firstCounter = 0; firstCounter < (sizeof(twoDimensionArray) / sizeof(twoDimensionArray[5])); ++firstCounter) {
+	for (int firstCounter = 0; firstCounter < (sizeof(twoDimensionArray) / sizeof(twoDimensionArray[arrayRow])); ++firstCounter) {
 
 		//要素を表示
 		cout << "a[" << firstCounter << "] = \"" << twoDimensionArray[firstCounter] << "\"\n";
