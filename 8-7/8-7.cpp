@@ -31,19 +31,23 @@ void countDigits(const char* characterArray, int storeArray[])
 		//0-9までの数字文字が文字列の配列に含まれているかを走査するループ
 		for (int secondCounter = 0; characterArray[secondCounter]; ++secondCounter) {
 
-			//文字列の配列に数字文字を検出した場合(char型の数値とint型の内部数値をあわせるため、JIS規格に則りchar型文字配列から48を引いている)
-			if ((characterArray[secondCounter] - 48) == firstCounter)
+			//文字列の配列に数字文字を検出した場合(char型の数値とint型の内部数値をあわせるため、数字文字'0'の値を引いている)
+			if ((characterArray[secondCounter] - '0') == firstCounter) {
 
 				//同じ添え字の要素をインクリメント
 				++storeArray[firstCounter];
+			}
 		}
 	}
 }
 
 int main()
 {
+	//配列の要素数
+	const int arraySize = 100;
+
 	//文字列の配列の初期化
-	char characterArray[100] = { 0 };
+	char characterArray[arraySize] = { 0 };
 
 	//表示する値の説明を行い、文字列の入力を促す
 	cout << "入力された文字列に含まれる数字文字の個数をカウントして、別の配列の同じ添字の要素として表示します。\n";
@@ -51,14 +55,17 @@ int main()
 	//文字列を入力
 	cin >> characterArray;
 
+	//数字文字の個数を格納する配列の要素数
+	const int storeArraySize = 10;
+
 	//数字文字の個数を格納する配列を初期化
-	int storeArray[10] = { 0 };
+	int storeArray[storeArraySize] = { 0 };
 
 	//文字列の配列中における、数字文字の個数を格納
 	countDigits(characterArray, storeArray);
 
 	//数字文字の個数を表示するループ
-	for (int firstCounter = 0; firstCounter < 10; ++firstCounter) {
+	for (int firstCounter = 0; firstCounter < storeArraySize; ++firstCounter) {
 
 		//個数を配列の要素として表示
 		cout << "c[" << firstCounter << "] = " << storeArray[firstCounter] << '\n';
