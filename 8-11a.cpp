@@ -36,6 +36,8 @@ int compareCharacterArray(const char* firstArray, const char* secondArray)
 
 			//返却値に1を代入
 			returnInteger = 1;
+
+			return returnInteger;
 		}
 
 		//第二引数の要素の方が大きかった場合
@@ -43,6 +45,8 @@ int compareCharacterArray(const char* firstArray, const char* secondArray)
 
 			//返却値に-1を代入
 			returnInteger = -1;
+
+			return returnInteger;
 		}
 	}
 	//値を返却
