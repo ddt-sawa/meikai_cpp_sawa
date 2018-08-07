@@ -9,21 +9,20 @@
   * void putv(const char* s);
   */
 
-
 #include<iostream>
 
 using namespace std;
 
 /**
 * 文字列の全文字を1行1文字ずつ表示する
-* @param characterArgument
+* @param characterArgument 文字列
 * @author Sawa
 * @since 7.20
 */
 void putCharacter(const char* characterArgument)
 {
 	//文字列中の全文字を1行につき1文字表示するループ
-	for (int firstCounter = 0; characterArgument[firstCounter]; firstCounter++) {
+	for (int firstCounter = 0; characterArgument[firstCounter]; ++firstCounter) {
 
 		//文字を表示して改行
 		cout << characterArgument[firstCounter] << '\n';
@@ -31,8 +30,11 @@ void putCharacter(const char* characterArgument)
 }
 int main()
 {
-	//文字列の宣言と初期化
-	char characterArray[20] = { 0 };
+	//配列の要素数
+	const int arraySize = 20;
+
+	//文字列の初期化
+	char characterArray[arraySize] = { 0 };
 
 	//文字列の入力を促す
 	cout << "文字列を入力してください。\n";
