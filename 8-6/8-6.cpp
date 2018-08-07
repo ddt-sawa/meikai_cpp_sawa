@@ -43,8 +43,11 @@ int returnCharacterNumber(const char* characterArray, char keyCharacter)
 
 int main()
 {
+	//配列の要素数
+	const int arraySize = 50;
+
 	//文字列の配列を初期化
-	char characterArray[50] = {0}; 
+	char characterArray[arraySize] = {0}; 
 	
 	//文字列の入力を促す
 	cout << "文字列を入力してください。\n"; 
@@ -56,7 +59,10 @@ int main()
 	char keyCharacter;
 
 	//指定文字の入力を促す
-	cout << "文字列中の個数を調べたい文字を入力してください。\n"; cin >> keyCharacter;
+	cout << "文字列中の個数を調べたい文字を入力してください。\n"; 
+	
+	//入力
+	cin >> keyCharacter;
 
 	//文字列中の指定文字の個数を表示
 	cout << "文字列中に" << keyCharacter << "は" << returnCharacterNumber(characterArray, keyCharacter) << "個あります。\n";
