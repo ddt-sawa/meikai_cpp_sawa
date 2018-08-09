@@ -57,3 +57,4 @@ int main()
 	//sumOf関数に配列の先頭要素へのポインタと要素数を渡し、合計値を表示
 	cout << "合計値は" << sumOf(intArray, arraySize) << "です。\n";
 }
+//gittest
