@@ -11,8 +11,14 @@
   *燃費を表すデータメンバを追加
   */
 
+  //NOを表す値を0とする
+const int falseValue = 0;
+
+//yesを表す値を1とする
+const int trueValue = 1;
+
 #include<iostream>
-  //ユーザー定義した"10-2.h"ヘッダをインクルード
+//ユーザー定義した"10-2.h"ヘッダをインクルード
 #include "10-2.h"
 
 using namespace std;
@@ -53,40 +59,48 @@ int main()
 		//移動意志の有無を尋ねる
 		cout << "移動[0・・・No/1・・・Yes] : ";
 
-		//移動意志の有無を入力
-		int movechecker; cin >> movechecker;
+		//移動意志
+		int moveChecker;
 
-		//0なら移動せず
-		if (movechecker == 0) {
+		do {
+			//移動意志の有無を入力
+			cin >> moveChecker;
 
-			break;
+		//0か1かを入力させるループ
+		} while (moveChecker != falseValue && moveChecker != trueValue);
+
+		//移動の意思がある場合
+		if (moveChecker == trueValue) {
+
+			//x座標方向への移動距離
+			double inputCoordinateX;
+
+			//x座標方向への移動距離の入力を促す
+			cout << "X方向の移動距離 : ";
+
+			//入力
+			cin >> inputCoordinateX;
+
+			//y座標方向への移動距離
+			double inputCoordinateY;
+
+			//y座標方向への移動距離の入力を促す
+			cout << "Y方向の移動距離 : ";
+
+			//入力
+			cin >> inputCoordinateY;
+
+			//移動距離*燃費が残燃料を上回った場合
+			if (myCar.moveCar(inputCoordinateX, inputCoordinateY) == false) {
+
+				//警告文を表示し、車の移動ループを再試行
+				cout << "燃料が足りません！\n";
+			}
 		}
-
-		//それ以外なら移動
-
-		//x座標方向への移動距離
-		double inputCoordinateX;
-
-		//x座標方向への移動距離の入力を促す
-		cout << "X方向の移動距離 : ";
-
-		//入力
-		cin >> inputCoordinateX;
-
-		//y座標方向への移動距離
-		double inputCoordinateY;
-
-		//y座標方向への移動距離の入力を促す
-		cout << "Y方向の移動距離 : ";
-
-		//入力
-		cin >> inputCoordinateY;
-
-		//移動距離*燃費が残燃料を上回った場合
-		if (myCar.moveCar(inputCoordinateX, inputCoordinateY) == false) {
-
-			//警告文を表示し、車の移動ループを再試行
-			cout << "燃料が足りません！\n";
+		//移動の意思がない場合
+		else {
+			//ループを抜ける
+			break;
 		}
 	}
 }
