@@ -88,31 +88,39 @@ public:
 	/**
 	* 指定された移動量の処理が可能であるかを判断し、可能であれば座標移動を行う
 	* @param inputCoordinateX x座標方向への移動量,inputCoordinateY y座標方向への移動量
-	* @return bool型の値　座標移動の可否
+	* @return boolValue　座標移動の可否
 	* @author Sawa
 	* @since 7.25
 	*/
 	bool moveCar(double inputCoordinateX, double inputCoordinateY)
 	{
+		//座標移動の可否
+		bool boolValue;
+
 		//車の直線移動距離
 		double driveDistance = sqrt(inputCoordinateX * inputCoordinateX + inputCoordinateY * inputCoordinateY);
 
 		//移動距離*燃費が残燃料を上回った場合
 		if (driveDistance * memberFuelConsumption > memberFuel) {
+		
 			//移動不可
-			return false;
+			boolValue = false;
 		}
+		//そうでない場合
+		else {
+			//残燃料から移動距離*燃費を消費し
+			memberFuel -= driveDistance * memberFuelConsumption;
 
-		//移動可能な場合、残燃料から移動距離*燃費を消費し
-		memberFuel -= driveDistance * memberFuelConsumption;
+			//現在座標にx軸方向への移動量を加える
+			memberCoordinateX += inputCoordinateX;
 
-		//現在座標にx軸方向への移動量を加える
-		memberCoordinateX += inputCoordinateX;
+			//現在座標yx軸方向への移動量を加える
+			memberCoordinateY += inputCoordinateY;
 
-		//現在座標yx軸方向への移動量を加える
-		memberCoordinateY += inputCoordinateY;
-
-		//移動完了
-		return true;
+			//移動成功
+			boolValue = true;
+		}
+		//移動の可否を返却
+		return boolValue;
 	}
 };

@@ -15,22 +15,28 @@
 
 using namespace std;
 
+//多次元配列の行数及び1次元配列の要素数
+const int arrayRow = 3;
+
+//多次元配列の列数
+const int arrayColumn = 5;
+
 /**
 * 多次元配列の各行における最大値を1次元配列の要素として格納する
-* @param intArray[][5] 多次元配列, storeArray[] 1次元配列, arrayNumber 要素数
+* @param intArray[][arrayColumn] 多次元配列, storeArray[] 1次元配列, arrayNumber 要素数
 * @author Sawa
 * @since 7.17
 */
-void getMaxLine(int intArray[][5], int storeArray[], int arrayNumber)
+void getMaxLine(int intArray[][arrayColumn], int storeArray[], int arrayRow)
 {   
 	//多次元配列における各行の最大値を1次元配列に格納するループ
-	for (int firstCounter = 0; firstCounter < arrayNumber; ++firstCounter){
+	for (int firstCounter = 0; firstCounter < arrayRow; ++firstCounter){
 
 		//各行における最大値を仮に先頭要素とする
 		int maxLine = intArray[firstCounter][0];
 
 		//各行における最大値をそれぞれ求めるループ
-		for (int secondCounter = 0; secondCounter < 5; ++secondCounter){
+		for (int secondCounter = 0; secondCounter < arrayColumn; ++secondCounter){
 
 			//現段階における仮最大値より大きい値が見つかった場合
 			if (maxLine < intArray[firstCounter][secondCounter]) {
@@ -47,20 +53,17 @@ void getMaxLine(int intArray[][5], int storeArray[], int arrayNumber)
 
 int main()
 {
-    //多次元配列の行数及び1次元配列の要素数
-	const int arraySize = 3;
-
 	//多次元配列
-	int intArray[arraySize][5]; 
+	int intArray[arrayRow][arrayColumn] = { 0 };
 	
 	//多次元配列の各行における最大値を格納する1次元配列
-	int storeArray[arraySize];
+	int storeArray[arrayRow] = { 0 };
 
 	//多次元配列の行を参照するループ
-	for (int firstCounter = 0; firstCounter < arraySize; ++firstCounter){
+	for (int firstCounter = 0; firstCounter < arrayRow; ++firstCounter){
 
 		//多次元配列の列を参照するループ
-		for (int secondCounter = 0; secondCounter < 5; ++secondCounter){
+		for (int secondCounter = 0; secondCounter < arrayColumn; ++secondCounter){
 
 			//要素入力を促す
 		cout << "a[" << firstCounter << "][" << secondCounter << "] : ";
@@ -70,10 +73,10 @@ int main()
 		}
 	}
     //getMaxLine関数を呼び出し、多次元配列の各行における最大値を1次元配列に格納する
-	getMaxLine(intArray, storeArray, arraySize);
+	getMaxLine(intArray, storeArray, arrayRow);
 
 	//最大値を格納した1次元配列の要素を走査表示するループ
-	for (int firstCounter = 0; firstCounter < arraySize; ++firstCounter) {
+	for (int firstCounter = 0; firstCounter < arrayRow; ++firstCounter) {
 
 		// 要素を表示
 		cout << "m[" << firstCounter << "] = " << storeArray[firstCounter] << '\n';

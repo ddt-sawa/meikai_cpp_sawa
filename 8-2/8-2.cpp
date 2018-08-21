@@ -18,18 +18,13 @@ int main()
 	//配列を初期化
 	char characterArray[] = "ABC";
 
-	//配列内を全てナル文字にするため、文字列が入っている要素にナル文字を代入するループ
-	for (int firstCounter = 0; firstCounter < 3; ++firstCounter) {
+	//空文字列
+	char emptyString[] = "";
 
-		//ナル文字を代入
-		characterArray[firstCounter] = '\0';
-	}
+	//配列のポインタを空文字列のポインタに変更する
+	*characterArray = *emptyString;
 
-	//全要素を表示して空文字列であることを確認するループ
-	for (int firstCounter = 0; firstCounter < 4; firstCounter++) {
-
-		//要素を表示（ナル文字なので表示されない）
-		cout << "characterArray[" << firstCounter << "] = " << characterArray[firstCounter] << '\n';
-	}
+	//要素を表示（空文字列なので表示されない）
+	cout << characterArray[0];
 }
 
