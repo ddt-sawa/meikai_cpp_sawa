@@ -13,6 +13,9 @@
 
 using namespace std;
 
+//配列の要素数
+const int arraySize = 5;
+
 /**
 * ポインタが指すオブジェクトの先頭から、入力したバイト数先に文字の値を代入する
 * @param argumentPointer ポインタ, argumentInteger整数, argumentCharacter 文字
@@ -30,9 +33,8 @@ void memorySet(void* argumentPointer, int argumentInteger, unsigned char argumen
 }
 int main()
 {
-
 	//int型配列を宣言し、初期化
-	int intArray[5] = {0};
+	int intArray[arraySize] = {0};
 
 	//int型配列の先頭から何バイト離れた位置に値を代入するかを決める整数
 	int inputInteger = 2;
@@ -44,7 +46,7 @@ int main()
 	memorySet(intArray, inputInteger, inputCharacter);
 
 	//文字情報を代入されたint型配列が、どのようになっているかを調べるループ
-	for (int firstCounter = 0; firstCounter < 5; ++firstCounter) {
+	for (int firstCounter = 0; firstCounter < arraySize; ++firstCounter) {
 
 		//配列を走査表示
 		cout << intArray[firstCounter];
