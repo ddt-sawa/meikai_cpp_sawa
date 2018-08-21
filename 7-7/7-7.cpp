@@ -1,15 +1,15 @@
 ﻿/*
- * 7-7.cpp
- *
- *  Created on: 2018/06/25
- *      Author: ddt
- */
+* 7-7.cpp
+*
+*  Created on: 2018/06/25
+*      Author: ddt
+*/
 
- /*演習7-7 要素数nの配列aから要素a[idx]を削除する関数aryrmvを作成せよ。
-  * int aryrmv(int a[], int n, int idx);
-  * 削除はa[idx]より後方の全要素を一つずつ前方にずらすことによって行なう。移動されずに
-  * 余ってしまう末尾要素a[n - 1]の値は変更しなくてよい。たとえば、配列aの要素が{1, 3, 4, 7, 9, 11}の
-  * ときにaryrmv(a, 6, 2)と呼び出した後の配列aの要素は{1, 3, 7, 9, 11, 11}となる。 */
+/*演習7-7 要素数nの配列aから要素a[idx]を削除する関数aryrmvを作成せよ。
+* int aryrmv(int a[], int n, int idx);
+* 削除はa[idx]より後方の全要素を一つずつ前方にずらすことによって行なう。移動されずに
+* 余ってしまう末尾要素a[n - 1]の値は変更しなくてよい。たとえば、配列aの要素が{1, 3, 4, 7, 9, 11}の
+* ときにaryrmv(a, 6, 2)と呼び出した後の配列aの要素は{1, 3, 7, 9, 11, 11}となる。 */
 
 #include<iostream>
 
@@ -24,7 +24,7 @@ using namespace std;
 void removeArray(int intArray[], int arraySize, int deleteIndex)
 {
 	//配列の要素を削除するためのループ
-	for (int firstCounter = deleteIndex; firstCounter < arraySize; ++firstCounter) {
+	for (int firstCounter = deleteIndex; firstCounter < arraySize - 1; ++firstCounter) {
 
 		//消去される要素以降にある要素は一つずつ配列をズラす
 		intArray[firstCounter] = intArray[firstCounter + 1];
@@ -36,8 +36,8 @@ int main()
 	//配列の要素数
 	const int arraySize = 5;
 
-	//配列の宣言
-	int intArray[arraySize];
+	//配列
+	int intArray[arraySize] = { 0 };
 
 	//配列の要素を入力するループ
 	for (int firstCounter = 0; firstCounter < arraySize; ++firstCounter) {
@@ -76,4 +76,3 @@ int main()
 		cout << "a[" << firstCounter << "] = " << intArray[firstCounter] << '\n';
 	}
 }
-
