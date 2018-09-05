@@ -19,7 +19,7 @@ int compareString(const char* firstArray, const char* secondArray)
 	int returnDifference = 0;
 
 	//両文字列の大小関係を比較するループ(どちらかの文字列がナル文字に入るor差が生じるまでループ)
-	for (int firstCounter = 0; (firstArray[firstCounter] && secondArray[firstCounter]) || returnDifference; ++firstCounter) {
+	for (int firstCounter = 0; firstArray[firstCounter] && secondArray[firstCounter] && !returnDifference; ++firstCounter) {
 
 		//unsigned char型の値として文字を比較
 		returnDifference = static_cast<unsigned char>(firstArray[firstCounter]) - static_cast<unsigned char>(secondArray[firstCounter]);
