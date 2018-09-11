@@ -1,4 +1,11 @@
-﻿/*演習14-3 簡易的な文字列クラスStringを作成せよ。以下のコードを参考にして、
+﻿/*
+* 14-3.h
+*
+*  Created on: 2018/07/05
+*      Author: ddt
+*/
+
+/*演習14-3 簡易的な文字列クラスStringを作成せよ。以下のコードを参考にして、
 コンストラクタ・デストラクタ・各メンバ関数を、自分で設計すること。*/
 
 
@@ -11,10 +18,6 @@
 
 //簡易的文字列クラスStringClassを定義
 class StringClass {
-
-	int stringLength;     //文字列の長さ
-	char* stringPointer;  //文字列の先頭へのポインタ
-
 public:
     //変換コンストラクタ宣言
 	StringClass(const char*);
@@ -39,6 +42,11 @@ public:
 
 	//StringClass型オブジェクトの加算(文字列を繋げる)を可能にする演算子関数+
 	friend StringClass operator+(StringClass& firstString, StringClass& secondString);
+
+private:
+	int stringLength;     //文字列の長さ
+	char* stringPointer;  //文字列の先頭へのポインタ
+
 };
 
 //StringClass型オブジェクトを出力できるようにする演算子関数<<
