@@ -25,10 +25,6 @@
 
 //簡易行列クラスMatricClassを定義
 class MatrixClass {
-	int matrixHeight; //行数
-	int matrixWidth;  //列数
-	double* matrixPointer; //配列先頭要素へのポインタ
-
 public:
 	//MatrixClassコンストラクタ
 	MatrixClass(int, int);
@@ -62,6 +58,12 @@ public:
 
 	//MatrixClass型の行列を代入する演算子関数=
 	MatrixClass& operator=(const MatrixClass& inputMatrix);
+
+private:
+	int matrixHeight; //行数
+	int matrixWidth;  //列数
+	double* matrixPointer; //配列先頭要素へのポインタ
+
 };
 //MatrixClass型をcout演算子で表示する演算子関数<<
 std::ostream& operator<<(std::ostream& inputString, const MatrixClass& inputMatrix);
