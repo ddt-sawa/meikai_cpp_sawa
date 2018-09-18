@@ -25,7 +25,7 @@ public:
 	IntArray(const IntArray&);
 
 	//デストラクタ
-	~IntArray();
+	virtual ~IntArray();
 
 	//整数配列クラスの要素数のゲッタ
 	int getSize() const;

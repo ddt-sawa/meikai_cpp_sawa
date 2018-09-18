@@ -1,12 +1,13 @@
-﻿/*演習14-2 クラスIntArrayのオブジェクトを自己初期化する宣言 IntArray x = x では、
-*オブジェクトxのデータメンバnelemとvecが不定値で初期化される。自己初期化が行われた際に、
-*データメンバを不定値で初期化しないようにコピーコンストラクタを改良せよ。
+﻿/*
+* 14-2.cpp
+*
+*  Created on: 2018/07/04
+*      Author: ddt
 */
 
 #include<iomanip>
 #include<iostream>
 #include"14-2_IntArray.h"
-#include "14-2_MemberDefinition.h"
 
 using namespace std;
 
